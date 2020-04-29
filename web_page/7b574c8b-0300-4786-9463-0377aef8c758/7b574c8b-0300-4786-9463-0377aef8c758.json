@@ -1,0 +1,492 @@
+{
+  "designerVersion" : "1.10.18",
+  "previousDesignerVersion" : "1.7.25",
+  "id" : "7b574c8b-0300-4786-9463-0377aef8c758",
+  "name" : "pageAlasql",
+  "lastUpdate" : 1588119910961,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "2b726613-7edd-4907-a5a6-f4d4d262c9e4",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Export"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "995143f0-fa6c-4d29-8719-7e8cecc5c488",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "headers" : {
+                  "type" : "constant",
+                  "value" : [
+                    "country",
+                    "indicatif"
+                  ]
+                },
+                "content" : {
+                  "type" : "expression",
+                  "value" : "dateExported"
+                },
+                "columnsKey" : {
+                  "type" : "constant",
+                  "value" : [
+                    "country",
+                    "indicatif"
+                  ]
+                },
+                "selectedRow" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "striped" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "condensed" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "bordered" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "34af0995-591c-41cc-a3d0-e0446eca409e",
+              "hasValidationError" : false,
+              "id" : "pbTable"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "showImport" : {
+                  "type" : "constant"
+                },
+                "labelImported" : {
+                  "type" : "constant",
+                  "value" : "Import a CSV or Excel file"
+                },
+                "headerImported" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "valueImported" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "showExport" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelExported" : {
+                  "type" : "constant",
+                  "value" : "Get the list of phone indicatifs"
+                },
+                "controlExport" : {
+                  "type" : "variable",
+                  "value" : "controlExport"
+                },
+                "dataExport" : {
+                  "type" : "variable",
+                  "value" : "dateExported"
+                },
+                "fileNameExported" : {
+                  "type" : "constant",
+                  "value" : "phone.xls"
+                }
+              },
+              "reference" : "7e009d97-4f62-4df8-9136-211cdcf5176d",
+              "hasValidationError" : false,
+              "id" : "customAlaSqlOperation"
+            }
+          ]
+        ]
+      },
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "2d97d711-e803-465d-b5d1-dc49efd5715f",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Import"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "0866b51c-284c-49e2-9e84-57f12b3d1efe",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "showImport" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelImported" : {
+                  "type" : "constant",
+                  "value" : "Import a CSV or Excel file"
+                },
+                "headerImported" : {
+                  "type" : "variable",
+                  "value" : "excelImported.header"
+                },
+                "valueImported" : {
+                  "type" : "variable",
+                  "value" : "excelImported.data"
+                },
+                "showExport" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelExported" : {
+                  "type" : "constant"
+                },
+                "controlExport" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "dataExport" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "fileNameExported" : {
+                  "type" : "constant"
+                },
+                "statusImport" : {
+                  "type" : "variable",
+                  "value" : "excelImported.status"
+                },
+                "errorImport" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "fileNameImported" : {
+                  "type" : "variable",
+                  "value" : "excelImported.fileNameImported"
+                }
+              },
+              "reference" : "f3373ab2-678d-4c8e-b120-466c03406bf9",
+              "hasValidationError" : false,
+              "id" : "customAlaSqlOperation"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "headers" : {
+                  "type" : "expression",
+                  "value" : "excelImported.header"
+                },
+                "content" : {
+                  "type" : "expression",
+                  "value" : "excelImported.data"
+                },
+                "columnsKey" : {
+                  "type" : "expression",
+                  "value" : "excelImported.header"
+                },
+                "selectedRow" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "striped" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "condensed" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "bordered" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "42f21b8d-a42b-489c-b6d6-1629df8995bb",
+              "hasValidationError" : false,
+              "id" : "pbTable"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Header:<div class=\"alert alert-info\">{{excelImported.header|json}}</div>\n\nFileName:<div class=\"alert alert-info\">{{excelImported.fileNameImported}}</div>\n\nStatus:<div class=\"alert alert-warning\">{{excelImported.status |json}}</div>\n\nData:<div class=\"alert alert-success\">{{excelImported.data |json}}</div>"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                }
+              },
+              "reference" : "bd243073-d1aa-4834-8de5-d0feccb9bab2",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "735ff8a4-ee54-4e22-bd44-9e814f2bdce3",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "93adfc1c-4b06-43af-8c23-9f63a796d5c3",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "dateExported" : {
+      "type" : "json",
+      "value" : [
+        "[",
+        "    { \"country\":\"USA\", \"indicatif\":\"+1\"},",
+        "    { \"country\":\"France\", \"indicatif\":\"+33\"},",
+        "    { \"country\":\"Germany\", \"indicatif\":\"+39\"}",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "excelImported" : {
+      "type" : "json",
+      "value" : [
+        "{}"
+      ],
+      "exposed" : false
+    },
+    "controlExport" : {
+      "type" : "json",
+      "value" : [
+        "{\r",
+        "    \"headers\":true,\r",
+        "\t\"columns\": [ \r",
+        "        { \"columnid\" : \"country\", \"title\": \"Country\"},\r",
+        "        { \"columnid\" : \"indicatif\", \"title\": \"Phone indicatif\"}\r",
+        "    ]\r",
+        "}\r"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "7b574c8b-0300-4786-9463-0377aef8c758",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

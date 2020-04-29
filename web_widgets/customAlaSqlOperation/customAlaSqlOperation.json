@@ -1,0 +1,160 @@
+{
+  "designerVersion" : "1.10.12",
+  "previousDesignerVersion" : "1.6.46",
+  "id" : "customAlaSqlOperation",
+  "name" : "alaSqlOperation",
+  "lastUpdate" : 1588119910951,
+  "template" : "@customAlaSqlOperation.tpl.html",
+  "controller" : "@customAlaSqlOperation.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "showImport",
+      "name" : "showImport",
+      "type" : "boolean",
+      "bond" : "expression"
+    },
+    {
+      "label" : "labelImported",
+      "name" : "labelImported",
+      "type" : "text",
+      "defaultValue" : "Import a CSV or Excel file",
+      "bond" : "expression"
+    },
+    {
+      "label" : "fileNameImported",
+      "name" : "fileNameImported",
+      "help" : "Give back the name of the file imported",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "headerImported",
+      "name" : "headerImported",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "valueImported",
+      "name" : "valueImported",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "statusImport",
+      "name" : "statusImport",
+      "help" : "Status of import",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "error Import",
+      "name" : "errorImport",
+      "help" : "Fullfill if an error arrive",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "showExport",
+      "name" : "showExport",
+      "type" : "boolean",
+      "defaultValue" : true,
+      "bond" : "constant"
+    },
+    {
+      "label" : "labelExported",
+      "name" : "labelExported",
+      "help" : "",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Control Export",
+      "name" : "controlExport",
+      "help" : "Describe what is to be exported",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "dataExport",
+      "name" : "dataExport",
+      "help" : "Data to export (JSON format)",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "File Name Exported",
+      "name" : "fileNameExported",
+      "type" : "text",
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "bab6c77c-579c-48fb-9901-86e8c7a1686f",
+      "name" : "https://cdn.jsdelivr.net/alasql/0.3/alasql.min.js",
+      "type" : "js",
+      "order" : 2,
+      "external" : true
+    },
+    {
+      "id" : "4b6d04e3-f1e9-4ffd-a094-ed7bb5603c13",
+      "name" : "https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.10.3/xlsx.min.js",
+      "type" : "js",
+      "order" : 5,
+      "external" : true
+    },
+    {
+      "id" : "c60d6b08-e6e1-4360-b4f8-3a94266fec8e",
+      "name" : "https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.10.3/xlsx.js",
+      "type" : "js",
+      "order" : 4,
+      "external" : true
+    },
+    {
+      "id" : "8f15779e-af0d-4240-a501-887cf6bd59c2",
+      "name" : "https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.10.3/cpexcel.js",
+      "type" : "js",
+      "order" : 7,
+      "external" : true
+    },
+    {
+      "id" : "46f795ec-6d19-48b5-a3a8-16ff68e4e990",
+      "name" : "docexcel.gif",
+      "type" : "img",
+      "order" : 1,
+      "external" : false
+    },
+    {
+      "id" : "808afa4b-827a-47d5-8d90-02d3fda73884",
+      "name" : "https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.10.3/xlsx.full.min.js",
+      "type" : "js",
+      "order" : 3,
+      "external" : true
+    },
+    {
+      "id" : "c1faed1a-72fe-43e0-8217-1534737ca23c",
+      "name" : "https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.10.3/xlsx.core.min.js",
+      "type" : "js",
+      "order" : 6,
+      "external" : true
+    },
+    {
+      "id" : "7bb74554-b3e2-4f7f-aed9-ccf93c159fdd",
+      "name" : "ng-upload-0.5.19-patched.min.js",
+      "type" : "js",
+      "order" : 8,
+      "external" : false
+    },
+    {
+      "id" : "890855e2-f8b7-46a1-8f5e-c301d594ba0e",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 9,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}
