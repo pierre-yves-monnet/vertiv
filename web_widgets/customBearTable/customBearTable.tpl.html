@@ -8,6 +8,13 @@
 
 {{ctrl.message}}
 
+<div
+    ng-if="!properties.labelHidden"
+    ng-class="{ 'control-label--required-to-create': properties.required }"
+    class="control-label col-xs-{{ !properties.labelHidden && properties.labelPosition === 'left' ? properties.labelWidth : 12 }}">
+    {{ properties.label | uiTranslate }}
+</div>
+
 <table class="{{ctrl.getTableCss()}}" style="{{ctrl.getStyleCss()}}">					
     <tr>
 	    <th ng-repeat="header in ctrl.getHeader() track by $index" 
@@ -42,10 +49,11 @@
 		    </div>
 		    
 		    <div ng-if="header.control === 'link'">
-		        <a href="oneRecord[ header.name ]" title="{{header.tips}}">{{header.title}}</a>
+		        <a href="{{oneRecord[ header.name ]}}" title="{{header.tips}}">{{ctrl.getLinkName(header, oneRecord)}}</a>
+		        
 		    </div>
 		    <div ng-if="header.control === 'button'">
-		        <button ng-click="oneRecord[ header.name ]" title="{{header.tips}}">Click</button>
+		        <button style="width:{{ctrl.getBtnWidth(header, oneRecord)}};" ng-hide="ctrl.getCtrlHide(header, oneRecord)" ng-click="ctrl.btnClick(header, oneRecord)" title="{{header.tips}}">{{ctrl.getBtnLabel(header, oneRecord, "Click")}}</button>
 		    </div>
 		     <div ng-if="header.control === 'remove'">
 		        <button ng-click="ctrl.btnRemove(header, oneRecord)" 
@@ -105,7 +113,7 @@
 		    	    ng-disabled="ctrl.getActionReadOnly(header, oneRecord);" title="{{header.tips}}"/>
 		    </div>
 		    <div ng-if="header.control === 'textarea'">
-		    	<textarea ng-model="oneRecord[ header.name ]" row="{{header.row}}" cols="{{header.cols}}"  
+		    	<textarea style="width:100%; max-height:52px;" ng-model="oneRecord[ header.name ]" row="{{header.row}}" cols="{{header.cols}}"  
 		    	    ng-change="ctrl.checkRules()"
 		    	    ng-disabled="ctrl.getActionReadOnly(header, oneRecord);" title="{{header.tips}}"></textarea>
 		    </div>

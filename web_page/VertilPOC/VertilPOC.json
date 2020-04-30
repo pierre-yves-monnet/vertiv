@@ -2,7 +2,7 @@
   "designerVersion" : "1.10.54",
   "id" : "VertilPOC",
   "name" : "VertilPOC",
-  "lastUpdate" : 1588121552309,
+  "lastUpdate" : 1588207817474,
   "rows" : [
     [
       {
@@ -86,7 +86,7 @@
                 },
                 "value" : {
                   "type" : "variable",
-                  "value" : ""
+                  "value" : "formInput.opportunity.ownerUser"
                 },
                 "type" : {
                   "type" : "constant",
@@ -161,7 +161,7 @@
                 },
                 "value" : {
                   "type" : "variable",
-                  "value" : ""
+                  "value" : "formInput.opportunity.dataCollectUser"
                 },
                 "type" : {
                   "type" : "constant",
@@ -236,7 +236,7 @@
                 },
                 "value" : {
                   "type" : "variable",
-                  "value" : ""
+                  "value" : "formInput.opportunity.finalizeOfferUser"
                 },
                 "type" : {
                   "type" : "constant",
@@ -352,7 +352,7 @@
                         },
                         "readOnly" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "labelHidden" : {
                           "type" : "constant",
@@ -375,7 +375,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : ""
+                          "value" : "formInput.opportunity.opportunityNumber"
                         },
                         "type" : {
                           "type" : "constant",
@@ -428,8 +428,8 @@
                           "value" : ""
                         },
                         "readOnly" : {
-                          "type" : "constant",
-                          "value" : false
+                          "type" : "expression",
+                          "value" : "formControl.readonly.revenue"
                         },
                         "labelHidden" : {
                           "type" : "constant",
@@ -452,7 +452,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : ""
+                          "value" : "formInput.opportunity.revenue"
                         },
                         "type" : {
                           "type" : "constant",
@@ -529,7 +529,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : ""
+                          "value" : "formInput.opportunity.opportunityType"
                         }
                       },
                       "reference" : "46336155-5617-4fe9-a726-57341d64f113",
@@ -595,7 +595,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : ""
+                          "value" : "formInput.opportunity.endUser"
                         }
                       },
                       "reference" : "09bf305e-a97c-4749-b889-9ee5bfe05a58",
@@ -669,7 +669,7 @@
                         },
                         "action" : {
                           "type" : "constant",
-                          "value" : "Submit task"
+                          "value" : "Add to collection"
                         },
                         "assign" : {
                           "type" : "constant",
@@ -701,7 +701,8 @@
                           "type" : "interpolation"
                         },
                         "collectionToModify" : {
-                          "type" : "variable"
+                          "type" : "variable",
+                          "value" : "formInput.opportunity.quotes"
                         },
                         "modalId" : {
                           "type" : "constant",
@@ -712,7 +713,8 @@
                           "value" : "Last"
                         },
                         "valueToAdd" : {
-                          "type" : "constant"
+                          "type" : "expression",
+                          "value" : "formControl.quoteToAdd"
                         },
                         "removeItem" : {
                           "type" : "variable"
@@ -756,14 +758,22 @@
                           ]
                         },
                         "content" : {
-                          "type" : "constant"
+                          "type" : "expression",
+                          "value" : "formInput.opportunity.quotes"
                         },
                         "columnsKey" : {
-                          "type" : "constant"
+                          "type" : "constant",
+                          "value" : [
+                            "quoteNumber",
+                            "revision",
+                            "submittedDate | uiDate",
+                            "revenue",
+                            "opportunityRollup"
+                          ]
                         },
                         "selectedRow" : {
                           "type" : "variable",
-                          "value" : ""
+                          "value" : "selectedQuote"
                         },
                         "striped" : {
                           "type" : "constant",
@@ -775,12 +785,64 @@
                         },
                         "bordered" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         }
                       },
                       "reference" : "277684fe-a653-4193-8c53-8a20a9d22ed5",
                       "hasValidationError" : false,
                       "id" : "pbTable"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Default label"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "SelectedQuote={{selectedQuote}}<p>\n{{formInput.opportunity.quotes}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "f7901078-fea2-419b-8824-8fdf3e4928f0",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
                     }
                   ],
                   [
@@ -798,8 +860,8 @@
                           "value" : ""
                         },
                         "hidden" : {
-                          "type" : "constant",
-                          "value" : false
+                          "type" : "expression",
+                          "value" : "selectedQuote === null"
                         },
                         "repeatedCollection" : {
                           "type" : "variable",
@@ -865,7 +927,7 @@
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : ""
+                                "value" : "selectedQuote.quoteNumber"
                               },
                               "type" : {
                                 "type" : "constant",
@@ -940,7 +1002,7 @@
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : ""
+                                "value" : "selectedQuote.revision"
                               },
                               "type" : {
                                 "type" : "constant",
@@ -1017,7 +1079,7 @@
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : ""
+                                "value" : "selectedQuote.revenue"
                               },
                               "type" : {
                                 "type" : "constant",
@@ -1097,7 +1159,7 @@
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : ""
+                                "value" : "selectedQuote.customerSold"
                               }
                             },
                             "reference" : "1ffda7c8-2771-454f-aba1-ef74ddf483f6",
@@ -1135,7 +1197,7 @@
                               },
                               "buttonStyle" : {
                                 "type" : "constant",
-                                "value" : "default"
+                                "value" : "info"
                               },
                               "action" : {
                                 "type" : "constant",
@@ -1237,7 +1299,7 @@
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : ""
+                                "value" : "selectedQuote.submittedDate"
                               },
                               "dateFormat" : {
                                 "type" : "constant",
@@ -1293,7 +1355,7 @@
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : ""
+                                "value" : "selectedQuote.opportunityRollup"
                               }
                             },
                             "reference" : "13e85acc-29e6-42be-840d-342c43711589",
@@ -1358,7 +1420,7 @@
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : ""
+                                "value" : "selectedQuote.priceList"
                               }
                             },
                             "reference" : "c3ad745b-fdc4-4472-9aca-d780c11ece98",
@@ -1419,7 +1481,7 @@
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : ""
+                                "value" : "selectedQuote.discountGeneral"
                               },
                               "type" : {
                                 "type" : "constant",
@@ -1460,8 +1522,8 @@
                                 "value" : false
                               },
                               "value" : {
-                                "type" : "constant",
-                                "value" : "This is the initial value"
+                                "type" : "expression",
+                                "value" : "selectedQuote.items"
                               },
                               "tablecssclass" : {
                                 "type" : "constant",
@@ -1475,8 +1537,8 @@
                                 "value" : "itemList.header"
                               },
                               "dynamicLists" : {
-                                "type" : "constant",
-                                "value" : "{ \"listscreen\" : [ {\"key\":\"TA\", \"name\":\"Tablette\"} , {\"key\":\"PC\", \"name\":\"Computer\"} ] }"
+                                "type" : "expression",
+                                "value" : ""
                               },
                               "showdebug" : {
                                 "type" : "constant",
@@ -1507,8 +1569,60 @@
                             "dimension" : {
                               "xs" : 12,
                               "sm" : 12,
-                              "md" : 4,
-                              "lg" : 4
+                              "md" : 12,
+                              "lg" : 12
+                            },
+                            "propertyValues" : {
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "labelHidden" : {
+                                "type" : "constant",
+                                "value" : true
+                              },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : "Default label"
+                              },
+                              "labelPosition" : {
+                                "type" : "constant",
+                                "value" : "top"
+                              },
+                              "labelWidth" : {
+                                "type" : "constant",
+                                "value" : 4
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : true
+                              },
+                              "text" : {
+                                "type" : "interpolation",
+                                "value" : "List={{selectedQuote.items}}"
+                              },
+                              "alignment" : {
+                                "type" : "constant",
+                                "value" : "left"
+                              }
+                            },
+                            "reference" : "d285501f-704e-4180-8aa5-95db1288e230",
+                            "hasValidationError" : false,
+                            "id" : "pbText"
+                          }
+                        ],
+                        [
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "xs" : 12,
+                              "sm" : 12,
+                              "md" : 3,
+                              "lg" : 3
                             },
                             "propertyValues" : {
                               "cssClasses" : {
@@ -1575,8 +1689,97 @@
                             "dimension" : {
                               "xs" : 12,
                               "sm" : 12,
-                              "md" : 4,
-                              "lg" : 4
+                              "md" : 3,
+                              "lg" : 3
+                            },
+                            "propertyValues" : {
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "disabled" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : "Add one item"
+                              },
+                              "alignment" : {
+                                "type" : "constant",
+                                "value" : "left"
+                              },
+                              "buttonStyle" : {
+                                "type" : "constant",
+                                "value" : "info"
+                              },
+                              "action" : {
+                                "type" : "constant",
+                                "value" : "Add to collection"
+                              },
+                              "assign" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "url" : {
+                                "type" : "interpolation"
+                              },
+                              "responseStatusCode" : {
+                                "type" : "variable",
+                                "value" : ""
+                              },
+                              "dataToSend" : {
+                                "type" : "constant"
+                              },
+                              "dataFromSuccess" : {
+                                "type" : "variable",
+                                "value" : ""
+                              },
+                              "closeOnSuccess" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "dataFromError" : {
+                                "type" : "variable",
+                                "value" : ""
+                              },
+                              "targetUrlOnSuccess" : {
+                                "type" : "interpolation"
+                              },
+                              "collectionToModify" : {
+                                "type" : "variable",
+                                "value" : "selectedQuote.items"
+                              },
+                              "modalId" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "collectionPosition" : {
+                                "type" : "constant",
+                                "value" : "Last"
+                              },
+                              "valueToAdd" : {
+                                "type" : "constant"
+                              },
+                              "removeItem" : {
+                                "type" : "variable"
+                              }
+                            },
+                            "reference" : "4aa29665-1844-4822-9bfb-f5f819f27650",
+                            "hasValidationError" : false,
+                            "id" : "pbButton"
+                          },
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "xs" : 12,
+                              "sm" : 12,
+                              "md" : 3,
+                              "lg" : 3
                             },
                             "propertyValues" : {
                               "cssClasses" : {
@@ -1625,8 +1828,8 @@
                             "dimension" : {
                               "xs" : 12,
                               "sm" : 12,
-                              "md" : 4,
-                              "lg" : 4
+                              "md" : 3,
+                              "lg" : 3
                             },
                             "propertyValues" : {
                               "cssClasses" : {
@@ -2437,6 +2640,58 @@
           ]
         }
       }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Default label"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "<div class=\"alert alert-success\">{{formInput}}</div>\n<div class=\"alert alert-primary\">{{formControl}}</div>\n<div class=\"alert alert-danger\">{{excelImported}}</div>\n<div class=\"alert alert-warning\">{{formOutput}}</div>"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "cb2b30fc-0dbb-4c8a-b74c-5eb0839642df",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
     ]
   ],
   "assets" : [
@@ -2458,9 +2713,9 @@
   "inactiveAssets" : [ ],
   "variables" : {
     "formInput" : {
-      "type" : "json",
+      "type" : "url",
       "value" : [
-        "{ }"
+        "../API/extension/context?taskId={{id}}&caseId={{id}}&processId={{id}}"
       ],
       "exposed" : false
     },
@@ -2482,9 +2737,7 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "return {",
-        "",
-        "}"
+        "return { 'opportunityInput' : $data.formInput.opportunity};"
       ],
       "exposed" : false
     },
@@ -2501,38 +2754,92 @@
         "{ \"header\" : [",
         "    {",
         "    \"title\":\"Item code\",",
+        "    \"name\": \"item\",",
         "    \"control\":\"input\",",
         "        \"styleheader\":\"background-color: #31b0d5;\"",
         "    },",
         "    {",
         "        \"title\":\"Item description\",",
+        "        \"name\": \"itemdescription\",",
         "        \"control\":\"input\",",
+        "        \"readonly\": true,",
         "        \"styleheader\":\"background-color: #31b0d5;\"",
         "        ",
         "    },",
         "    {",
         "        \"title\":\"Unit price\",",
+        "        \"name\":\"unitPrice\",",
         "        \"control\":\"input\",",
+        "        \"readonly\": true,",
         "        \"styleheader\":\"background-color: #31b0d5;\"",
         "    },",
         "    {",
         "        \"title\":\"Qty\",",
-        "        \"control\":\"input\",",
+        "        \"name\":\"quantity\",",
+        "        \"control\":\"number\",",
         "        \"styleheader\":\"background-color: #31b0d5;\"",
         "    },",
         "    {",
         "        \"title\":\"Discount\",",
+        "        \"name\":\"discount\",",
         "        \"control\":\"input\",",
         "        \"styleheader\":\"background-color: #31b0d5;\"",
         "    },",
         "    {",
         "        \"title\":\"Total Price\",",
+        "        \"name\":\"total\",",
+        "        \"readonly\": true,",
         "        \"control\":\"input\",",
         "        \"styleheader\":\"background-color: #31b0d5;\"",
         "    }",
         "    ]",
         "}",
         "    "
+      ],
+      "exposed" : false
+    },
+    "id" : {
+      "type" : "urlparameter",
+      "value" : [
+        "id"
+      ],
+      "exposed" : false
+    },
+    "formControl" : {
+      "type" : "expression",
+      "value" : [
+        "var formControl = {",
+        "    \"quoteToAdd\": { \"opportunityRollup\":true}",
+        "};",
+        "",
+        "if (! $data.formInput.opportunity.quotes || $data.formInput.opportunity.quotes.length ==1) {",
+        "    console.log(\"Empty Quotes list detected, add one value \");",
+        "    $data.formInput.opportunity.quotes.push( formControl.quoteToAdd);",
+        "}",
+        "",
+        "if ($data.selectedQuote && $data.excelImported) {",
+        "    // load the excel in the list",
+        "    console.log(\"New Excel Imported\")",
+        "    if ( ! $data.selectedQuote.items) {",
+        "        $data.selectedQuote.items= [];",
+        "    }",
+        "    console.log(\"List To Insert : \"+$data.excelImported.data.length+ \" value \"+angular.toJson( $data.excelImported.data));",
+        "    console.log(\"List Before : \"+$data.selectedQuote.items.length+\" value=\"+angular.toJson( $data.selectedQuote.items));",
+        "    ",
+        "    $data.selectedQuote.items.concat( $data.excelImported.data );",
+        "    console.log(\"List After : \"+$data.selectedQuote.items.length);",
+        "    // $data.excelImported=null;",
+        "}",
+        "",
+        "",
+        "return formControl;"
+      ],
+      "exposed" : false
+    },
+    "selectedQuote" : {
+      "type" : "json",
+      "value" : [
+        "{}"
       ],
       "exposed" : false
     }

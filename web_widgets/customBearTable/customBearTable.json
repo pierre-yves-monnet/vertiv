@@ -3,7 +3,7 @@
   "previousDesignerVersion" : "1.2.9",
   "id" : "customBearTable",
   "name" : "BearTable",
-  "lastUpdate" : 1588120286027,
+  "lastUpdate" : 1588205196851,
   "template" : "@customBearTable.tpl.html",
   "controller" : "@customBearTable.ctrl.js",
   "description" : "Display a table, with rich control. Via the header, different mechanism can be controlled:\n* sort the column, yes or no\n* filter the column, yes or no\n* type of the control for the record : input, text, select, link, button",
@@ -97,6 +97,14 @@
         "\"value\":100} ]"
       ],
       "bond" : "expression"
+    },
+    {
+      "label" : "Hide Label",
+      "name" : "labelHidden",
+      "help" : "Hide the Bear Table label",
+      "type" : "boolean",
+      "defaultValue" : true,
+      "bond" : "constant"
     }
   ],
   "assets" : [

@@ -1,0 +1,157 @@
+{
+  "designerVersion" : "1.10.18",
+  "previousDesignerVersion" : "1.8.39",
+  "id" : "bearTableForm",
+  "name" : "bearTableForm",
+  "lastUpdate" : 1588205149301,
+  "rows" : [
+    [
+      {
+        "type" : "formContainer",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "13631a1b-14d6-4f6b-882b-b048b0e0ffec",
+        "hasValidationError" : false,
+        "id" : "pbFormContainer",
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "0bff1b70-19cc-4a6e-8d8e-8549d04f80dd",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "value" : {
+                    "type" : "expression",
+                    "value" : "tableValues"
+                  },
+                  "tablecssclass" : {
+                    "type" : "constant"
+                  },
+                  "tablecssstyle" : {
+                    "type" : "constant"
+                  },
+                  "headervalue" : {
+                    "type" : "expression",
+                    "value" : "tableHeaderList"
+                  },
+                  "dynamicLists" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "showdebug" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "Label" : {
+                    "type" : "constant"
+                  },
+                  "checkrules" : {
+                    "type" : "constant"
+                  },
+                  "actionsRules" : {
+                    "type" : "constant"
+                  },
+                  "pagination" : {
+                    "type" : "constant",
+                    "value" : [
+                      "[ {\"name\" : \"10 lines\"",
+                      "\"value\":10}",
+                      "{\"name\" : \"50 lines\"",
+                      "\"value\":50}",
+                      "{\"name\" : \"100 lines\"",
+                      "\"value\":100} ]"
+                    ]
+                  }
+                },
+                "reference" : "65918884-f533-4188-a3c0-f99777076c7e",
+                "hasValidationError" : false,
+                "id" : "customBearTable"
+              }
+            ]
+          ]
+        }
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "d00b9b2f-12b6-4f26-bddb-20df78abbdea",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "a97b8061-5ad4-4ccb-a0f4-3360408299f0",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "tableValues" : {
+      "type" : "json",
+      "value" : [
+        "[\r",
+        "    {\"a_date\": \"2019-05-06\", \"assessor\":\"John Doe\", \"assessment\":\"Blah blah blah\"},\r",
+        "    {\"a_date\": \"2017-05-06\", \"assessor\":\"Jeanette Doe\", \"assessment\":\"Blah1 blah1 blah1\"},\r",
+        "    {\"a_date\": \"2018-05-06\", \"assessor\":\"Bozo the clown\", \"assessment\":\"Blah2 blah2 blah2\"}\r",
+        "]\r"
+      ],
+      "exposed" : false
+    },
+    "tableHeaderList" : {
+      "type" : "json",
+      "value" : [
+        "[\r",
+        "    {\"title\":\"Date\", \"name\":\"a_date\", \"filter\": false, \"order\":true, \"control\":\"text\" },\r",
+        "    {\"title\":\"Assessor\", \"name\":\"assessor\", \"filter\": false, \"order\":true, \"control\":\"text\" },\r",
+        "    {\"title\":\"Assessment\", \"name\":\"assessment\", \"filter\": false, \"order\":false, \"control\":\"text\" }\r",
+        "]\r"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "6bea92dd-7ea5-46dd-9301-a7950193a1fa",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer",
+  "displayName" : "bearTableForm"
+}

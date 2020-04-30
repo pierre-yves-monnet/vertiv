@@ -1,0 +1,2082 @@
+{
+  "designerVersion" : "1.10.18",
+  "previousDesignerVersion" : "1.8.29",
+  "id" : "59f4c0be-04a7-4fe8-8a83-98bfa7147e3b",
+  "name" : "testBearTable",
+  "lastUpdate" : 1588205180398,
+  "rows" : [
+    [
+      {
+        "type" : "tabsContainer",
+        "dimension" : {
+          "lg" : 12,
+          "md" : 12,
+          "sm" : 12,
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "vertical" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "tabs"
+          }
+        },
+        "reference" : "17e58b82-6adc-4be9-91aa-c72fd546aceb",
+        "hasValidationError" : false,
+        "id" : "pbTabsContainer",
+        "tabList" : [
+          {
+            "type" : "tabContainer",
+            "dimension" : {
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "disabled" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "title" : {
+                "type" : "interpolation",
+                "value" : "Basic example"
+              }
+            },
+            "reference" : "beb6305b-11a1-4e6d-ac7c-43560111f4ab",
+            "hasValidationError" : false,
+            "id" : "pbTabContainer",
+            "container" : {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : { },
+              "reference" : "3feca0b6-bfda-41c2-b167-a55fe6df1118",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "lg" : 6,
+                      "md" : 6,
+                      "sm" : 12,
+                      "xs" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Full modification"
+                      },
+                      "level" : {
+                        "type" : "constant",
+                        "value" : "Level 2"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "2f3a2402-bfe6-4db7-bc1b-b5da57ebc181",
+                    "hasValidationError" : false,
+                    "id" : "pbTitle"
+                  },
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "lg" : 6,
+                      "md" : 6,
+                      "sm" : 12,
+                      "xs" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "2fb8da69-82bc-42ec-8bcb-f3fedc5d0f37",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "lg" : 6,
+                            "md" : 6,
+                            "sm" : 12,
+                            "xs" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "disabled" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "required" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "label" : {
+                              "type" : "interpolation",
+                              "value" : "ShowDebug"
+                            },
+                            "value" : {
+                              "type" : "variable",
+                              "value" : "parameters.showdebug"
+                            }
+                          },
+                          "reference" : "12d1d40c-7924-4696-af3a-a24dd93279ce",
+                          "hasValidationError" : false,
+                          "id" : "pbCheckbox"
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "lg" : 12,
+                      "md" : 12,
+                      "sm" : 12,
+                      "xs" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "table table-striped table-hover table-condensed"
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "value" : {
+                        "type" : "expression",
+                        "value" : "listValue"
+                      },
+                      "tablecssclass" : {
+                        "type" : "constant",
+                        "value" : "table table-striped ng-scope"
+                      },
+                      "tablecssstyle" : {
+                        "type" : "constant"
+                      },
+                      "headervalue" : {
+                        "type" : "expression",
+                        "value" : "headerValue"
+                      },
+                      "showPagination" : {
+                        "type" : "expression",
+                        "value" : "stepsPagination"
+                      },
+                      "dynamicLists" : {
+                        "type" : "expression",
+                        "value" : "dynamiclists"
+                      },
+                      "showdebug" : {
+                        "type" : "expression",
+                        "value" : "parameters.showdebug"
+                      },
+                      "Label" : {
+                        "type" : "constant"
+                      },
+                      "checkrules" : {
+                        "type" : "expression",
+                        "value" : "checkRule"
+                      },
+                      "actionsRules" : {
+                        "type" : "constant"
+                      }
+                    },
+                    "reference" : "95bf1187-2329-439c-bdf0-ba5adffcc8ed",
+                    "hasValidationError" : false,
+                    "id" : "customBearTable"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "lg" : 6,
+                      "md" : 6,
+                      "sm" : 12,
+                      "xs" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "disabled" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Add"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "buttonStyle" : {
+                        "type" : "constant",
+                        "value" : "success"
+                      },
+                      "action" : {
+                        "type" : "constant",
+                        "value" : "Add to collection"
+                      },
+                      "url" : {
+                        "type" : "interpolation"
+                      },
+                      "dataToSend" : {
+                        "type" : "constant"
+                      },
+                      "dataFromSuccess" : {
+                        "type" : "variable"
+                      },
+                      "dataFromError" : {
+                        "type" : "variable"
+                      },
+                      "targetUrlOnSuccess" : {
+                        "type" : "interpolation"
+                      },
+                      "collectionToModify" : {
+                        "type" : "variable",
+                        "value" : "listValue"
+                      },
+                      "collectionPosition" : {
+                        "type" : "constant",
+                        "value" : "Last"
+                      },
+                      "valueToAdd" : {
+                        "type" : "constant"
+                      },
+                      "removeItem" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "42530408-ed74-403a-a9b7-064c4a6ddee8",
+                    "hasValidationError" : false,
+                    "id" : "pbButton"
+                  },
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "lg" : 6,
+                      "md" : 6,
+                      "sm" : 12,
+                      "xs" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "disabled" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : "Remove"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "buttonStyle" : {
+                        "type" : "constant",
+                        "value" : "danger"
+                      },
+                      "action" : {
+                        "type" : "constant",
+                        "value" : "Remove from collection"
+                      },
+                      "url" : {
+                        "type" : "interpolation"
+                      },
+                      "dataToSend" : {
+                        "type" : "constant"
+                      },
+                      "dataFromSuccess" : {
+                        "type" : "variable"
+                      },
+                      "dataFromError" : {
+                        "type" : "variable"
+                      },
+                      "targetUrlOnSuccess" : {
+                        "type" : "interpolation"
+                      },
+                      "collectionToModify" : {
+                        "type" : "variable",
+                        "value" : "listValue"
+                      },
+                      "collectionPosition" : {
+                        "type" : "constant",
+                        "value" : "Last"
+                      },
+                      "valueToAdd" : {
+                        "type" : "constant"
+                      },
+                      "removeItem" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "c5692459-bfd5-4d77-b0cf-d14d7ba8b36f",
+                    "hasValidationError" : false,
+                    "id" : "pbButton"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "headers" : {
+                        "type" : "constant",
+                        "value" : [
+                          "myNumber",
+                          "country",
+                          "processor",
+                          "browser",
+                          "mydatetime",
+                          "hour",
+                          "password",
+                          "myEmail",
+                          "mydate"
+                        ]
+                      },
+                      "content" : {
+                        "type" : "expression",
+                        "value" : "listValue"
+                      },
+                      "columnsKey" : {
+                        "type" : "constant",
+                        "value" : [
+                          "mynumber",
+                          "country",
+                          "processor",
+                          "browser",
+                          "mydatetime",
+                          "myhour",
+                          "password",
+                          "myemail",
+                          "mydate"
+                        ]
+                      },
+                      "selectedRow" : {
+                        "type" : "variable",
+                        "value" : ""
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "striped" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "condensed" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "bordered" : {
+                        "type" : "constant",
+                        "value" : false
+                      }
+                    },
+                    "reference" : "54f541ad-cb32-403b-a245-d9ec28775fcb",
+                    "hasValidationError" : false,
+                    "id" : "pbTable"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "lg" : 12,
+                      "md" : 12,
+                      "sm" : 12,
+                      "xs" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Content of variable"
+                      },
+                      "level" : {
+                        "type" : "constant",
+                        "value" : "Level 2"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "773ca742-bc73-44d7-bf2b-7c4a79189c88",
+                    "hasValidationError" : false,
+                    "id" : "pbTitle"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "lg" : 12,
+                      "md" : 12,
+                      "sm" : 12,
+                      "xs" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "<div class=\"alert alert-danger\">{{listValue | json}}</div>"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : ""
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      }
+                    },
+                    "reference" : "00bba672-af7d-4d71-8293-734a43342a91",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "type" : "tabContainer",
+            "dimension" : {
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "disabled" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "title" : {
+                "type" : "interpolation",
+                "value" : "Conditional display"
+              }
+            },
+            "reference" : "d229c6c2-85a8-41b6-b4c4-b86c083db885",
+            "hasValidationError" : false,
+            "id" : "pbTabContainer",
+            "container" : {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : { },
+              "reference" : "3699e90f-7354-495f-ac17-1d6f5209ae8d",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "lg" : 6,
+                      "md" : 6,
+                      "sm" : 12,
+                      "xs" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Control line"
+                      },
+                      "level" : {
+                        "type" : "constant",
+                        "value" : "Level 2"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "5aa24b5b-08dd-4988-9732-05722e2cc0a2",
+                    "hasValidationError" : false,
+                    "id" : "pbTitle"
+                  },
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "lg" : 6,
+                      "md" : 6,
+                      "sm" : 12,
+                      "xs" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "4188e9e4-e8a8-4e11-bd51-abb502a3dd73",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "lg" : 12,
+                            "md" : 12,
+                            "sm" : 12,
+                            "xs" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "disabled" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "required" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "label" : {
+                              "type" : "interpolation",
+                              "value" : "Show debug"
+                            },
+                            "value" : {
+                              "type" : "variable",
+                              "value" : "parameters.showdebugSecond"
+                            }
+                          },
+                          "reference" : "31aaced5-4fcd-4c72-8f24-c6cf98863f03",
+                          "hasValidationError" : false,
+                          "id" : "pbCheckbox"
+                        }
+                      ],
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "lg" : 12,
+                            "md" : 12,
+                            "sm" : 12,
+                            "xs" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "disabled" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "required" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "label" : {
+                              "type" : "interpolation",
+                              "value" : "Only open"
+                            },
+                            "value" : {
+                              "type" : "variable",
+                              "value" : "dynamiclists.showhistory"
+                            }
+                          },
+                          "reference" : "efbea947-4fe8-42d0-bb13-75f5873985ae",
+                          "hasValidationError" : false,
+                          "id" : "pbCheckbox"
+                        }
+                      ],
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "lg" : 12,
+                            "md" : 12,
+                            "sm" : 12,
+                            "xs" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "disabled" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "required" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "label" : {
+                              "type" : "interpolation",
+                              "value" : "Show style line"
+                            },
+                            "value" : {
+                              "type" : "variable",
+                              "value" : "dynamiclists.showstyleline"
+                            }
+                          },
+                          "reference" : "d17259d1-861c-41f6-af35-41608029a55f",
+                          "hasValidationError" : false,
+                          "id" : "pbCheckbox"
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "lg" : 12,
+                      "md" : 12,
+                      "sm" : 12,
+                      "xs" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "value" : {
+                        "type" : "expression",
+                        "value" : "listValueSecond"
+                      },
+                      "tablecssclass" : {
+                        "type" : "constant",
+                        "value" : "table table-striped ng-scope"
+                      },
+                      "tablecssstyle" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "headervalue" : {
+                        "type" : "expression",
+                        "value" : "headerValueSecond"
+                      },
+                      "showPagination" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "dynamicLists" : {
+                        "type" : "expression",
+                        "value" : "dynamiclists"
+                      },
+                      "showdebug" : {
+                        "type" : "expression",
+                        "value" : "parameters.showdebugSecond"
+                      },
+                      "Label" : {
+                        "type" : "constant",
+                        "value" : "BearTable Second Example"
+                      },
+                      "checkrules" : {
+                        "type" : "constant"
+                      },
+                      "actionsRules" : {
+                        "type" : "expression",
+                        "value" : "actionsRulesSecond"
+                      }
+                    },
+                    "reference" : "eb66c2dd-735f-4d3f-b968-f855146b6f1a",
+                    "hasValidationError" : false,
+                    "id" : "customBearTable"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "lg" : 12,
+                      "md" : 12,
+                      "sm" : 12,
+                      "xs" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "ShowDebug:{{parameters.showdebugSecond}} / Dynamiclist:{{dynamiclists}}"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : ""
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      }
+                    },
+                    "reference" : "0fcad781-bc41-453c-ba50-a837248d049d",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "lg" : 12,
+                      "md" : 12,
+                      "sm" : 12,
+                      "xs" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Content of variable"
+                      },
+                      "level" : {
+                        "type" : "constant",
+                        "value" : "Level 2"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "c3fe9ba3-22fa-4ab6-91ec-506133973ed5",
+                    "hasValidationError" : false,
+                    "id" : "pbTitle"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "lg" : 12,
+                      "md" : 12,
+                      "sm" : 12,
+                      "xs" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "<div class=\"alert alert-danger\">{{listValueSecond | json}}</div>"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : ""
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      }
+                    },
+                    "reference" : "efed18fc-f87d-4680-a206-0ad26db2151e",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "type" : "tabContainer",
+            "dimension" : {
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "disabled" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "title" : {
+                "type" : "interpolation",
+                "value" : "Graph"
+              }
+            },
+            "reference" : "60187a21-5179-4bcf-b71d-814ec1046a77",
+            "hasValidationError" : false,
+            "id" : "pbTabContainer",
+            "container" : {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : { },
+              "reference" : "63c4eb2e-d06c-460c-9742-7d6e5d951e3b",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "lg" : 12,
+                      "md" : 12,
+                      "sm" : 12,
+                      "xs" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "value" : {
+                        "type" : "expression",
+                        "value" : "listValueGraph"
+                      },
+                      "tablecssclass" : {
+                        "type" : "constant"
+                      },
+                      "tablecssstyle" : {
+                        "type" : "constant"
+                      },
+                      "headervalue" : {
+                        "type" : "expression",
+                        "value" : "headerGraph"
+                      },
+                      "showPagination" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "dynamicLists" : {
+                        "type" : "expression",
+                        "value" : ""
+                      },
+                      "showdebug" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "Label" : {
+                        "type" : "constant",
+                        "value" : "Market per country"
+                      },
+                      "checkrules" : {
+                        "type" : "constant"
+                      },
+                      "actionsRules" : {
+                        "type" : "constant"
+                      }
+                    },
+                    "reference" : "56511b7c-aa62-4c59-8a3d-7f195e55aa6a",
+                    "hasValidationError" : false,
+                    "id" : "customBearTable"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "type" : "tabContainer",
+            "dimension" : {
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "disabled" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "title" : {
+                "type" : "interpolation",
+                "value" : "Childrens"
+              }
+            },
+            "reference" : "a667b776-ad03-41f1-930b-48357f70ea11",
+            "hasValidationError" : false,
+            "id" : "pbTabContainer",
+            "container" : {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : { },
+              "reference" : "a734938c-bd06-4c3f-a029-a61d981d560c",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 6,
+                      "lg" : 6
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Children"
+                      },
+                      "level" : {
+                        "type" : "constant",
+                        "value" : "Level 2"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "9e1a5528-72dd-4059-bb37-fea4c43b74a0",
+                    "hasValidationError" : false,
+                    "id" : "pbTitle"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "value" : {
+                        "type" : "expression",
+                        "value" : "valueChildren"
+                      },
+                      "tablecssclass" : {
+                        "type" : "constant",
+                        "value" : "table table-striped ng-scope"
+                      },
+                      "tablecssstyle" : {
+                        "type" : "constant"
+                      },
+                      "headervalue" : {
+                        "type" : "expression",
+                        "value" : "headerChildren"
+                      },
+                      "showPagination" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "dynamicLists" : {
+                        "type" : "constant",
+                        "value" : "{ \"listscreen\" : [ {\"key\":\"TA\", \"name\":\"Tablette\"} , {\"key\":\"PC\", \"name\":\"Computer\"} ] }"
+                      },
+                      "showdebug" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "Label" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "checkrules" : {
+                        "type" : "constant"
+                      },
+                      "actionsRules" : {
+                        "type" : "constant"
+                      }
+                    },
+                    "reference" : "1c4af320-981b-4acb-ade5-242623365482",
+                    "hasValidationError" : false,
+                    "id" : "customBearTable"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "In this example, the JSON data has CHILDREN on each record. The widget can display them, and can control a display by a checkbox on the Parent line.<br>\nOnly one depth is managed"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : ""
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      }
+                    },
+                    "reference" : "f8cc9e3c-d9cc-4043-84da-3f4deae863f3",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "type" : "tabContainer",
+            "dimension" : {
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "disabled" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "title" : {
+                "type" : "interpolation",
+                "value" : "Multi Selection"
+              }
+            },
+            "reference" : "e50e38cb-893b-4d1c-8622-5e5f2f25365e",
+            "hasValidationError" : false,
+            "id" : "pbTabContainer",
+            "container" : {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : { },
+              "reference" : "6bf1cf87-efb8-44fb-86b9-59f75686deaf",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "value" : {
+                        "type" : "expression",
+                        "value" : "listValue"
+                      },
+                      "tablecssclass" : {
+                        "type" : "constant",
+                        "value" : "table table-striped table-hover"
+                      },
+                      "tablecssstyle" : {
+                        "type" : "constant"
+                      },
+                      "headervalue" : {
+                        "type" : "expression",
+                        "value" : "headerMultiSelected"
+                      },
+                      "showPagination" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "dynamicLists" : {
+                        "type" : "constant",
+                        "value" : "{ \"listscreen\" : [ {\"key\":\"TA\", \"name\":\"Tablette\"} , {\"key\":\"PC\", \"name\":\"Computer\"} ] }"
+                      },
+                      "showdebug" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "Label" : {
+                        "type" : "constant",
+                        "value" : "Multi selected list"
+                      },
+                      "checkrules" : {
+                        "type" : "constant"
+                      },
+                      "actionsRules" : {
+                        "type" : "expression",
+                        "value" : "actionsRulesMultiSelected"
+                      }
+                    },
+                    "reference" : "e9112c7e-6a7c-4e3a-b713-17871424cf69",
+                    "hasValidationError" : false,
+                    "id" : "customBearTable"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "Select mulltiple line, and then see which one the user selected"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : ""
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      }
+                    },
+                    "reference" : "5fe11b15-1c71-4fed-8dab-23af7e8cf670",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "<div class=\"alert alert-warning\">listValue={{selectedMultiSelection.indice | json}}</div>\n<div class=\"alert alert-success\">selected={{selectedMultiSelection | json}}</div>"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "label" : {
+                        "type" : "interpolation",
+                        "value" : ""
+                      },
+                      "labelPosition" : {
+                        "type" : "constant",
+                        "value" : "top"
+                      },
+                      "labelWidth" : {
+                        "type" : "constant",
+                        "value" : 4
+                      }
+                    },
+                    "reference" : "75e66a63-e589-4e0c-9040-607f0946f2df",
+                    "hasValidationError" : false,
+                    "id" : "pbText"
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "a310d82c-d3b3-470e-9531-f248c1a8ef13",
+      "name" : "ui-bootstrap-tpls-0.13.0.min.js",
+      "type" : "js",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "6777baaf-12df-40f7-a73e-f956af21a3d9",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "609204ce-ca4a-40c5-821e-d41faad3ccc4",
+      "name" : "style1.css",
+      "type" : "css",
+      "order" : 3,
+      "external" : false
+    },
+    {
+      "id" : "3538ddfa-a35b-43c9-a3fb-206c2f3de421",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "stepsPagination" : {
+      "type" : "json",
+      "value" : [
+        "[ {\"name\" : \"Small (2)\", \"value\":2},",
+        "{\"name\" : \"10\", \"value\":10},",
+        "{\"name\" : \"Medium (50)\", \"value\":50},",
+        "{\"name\" : \"100\", \"value\":100},",
+        "{\"name\" : \"Large (500)\", \"value\":500} ]"
+      ],
+      "exposed" : false
+    },
+    "headerGraph" : {
+      "type" : "json",
+      "value" : [
+        "[ \r",
+        "     {   \"title\":\"market IE\", \r",
+        "        \"name\":\"marketie\", \r",
+        "        \"control\":\"number\",\r",
+        "        \"size\" : 40\r",
+        "    },\r",
+        "     {   \"title\":\"market Chrome\", \r",
+        "        \"name\":\"marketchrome\", \r",
+        "        \"control\":\"number\",\r",
+        "        \"size\" : 40\r",
+        "    },\r",
+        "     {   \"title\":\"market Firefox\", \r",
+        "        \"name\":\"marketfirefox\", \r",
+        "        \"control\":\"number\",\r",
+        "        \"size\" : 40\r",
+        "    },\r",
+        "    {   \"title\":\"Repartion\", \r",
+        "        \"name\": \"repartition\",\r",
+        "        \"control\":\"piechart\"\r",
+        "    }\r",
+        "]\r",
+        "        "
+      ],
+      "exposed" : false
+    },
+    "headerChildren" : {
+      "type" : "json",
+      "value" : [
+        "[ \r",
+        "   \r",
+        "    {   \"title\":\"\", \r",
+        "        \"name\": \"period\",\r",
+        "        \"control\":\"children\", \r",
+        "        \"styleheader\":\"background-color: #007DB3\",\r",
+        "             \"stylecol\":\"background-color: #F2DEDE\",\r",
+        "        \"tips\":\"Click here to display the period attached\"\r",
+        "    }, \r",
+        "    {   \"title\":\"First name\", \r",
+        "        \"name\":\"firstname\", \r",
+        "        \"control\":\"text\",\r",
+        "        \"styleheader\":\"background-color: #007DB3\",\r",
+        "        \"stylecol\":\"background-color: #F2DEDE\"\r",
+        "    },\r",
+        "    {   \"title\":\"last name\", \r",
+        "        \"name\": \"lastname\",\r",
+        "        \"control\":\"text\",\r",
+        "        \"styleheader\":\"background-color: #007DB3\",\r",
+        "             \"stylecol\":\"background-color: #F2DEDE\"\r",
+        "    }, \r",
+        "        \r",
+        "   \r",
+        "\r",
+        "     {   \"title\":\"\", \r",
+        "     \t\"parent\":\"period\",\r",
+        "        \"name\": \"margin\",\r",
+        "        \"control\":\"text\"\r",
+        "    },\r",
+        "     {   \"title\":\"Type\", \r",
+        "     \t\"parent\":\"period\",\r",
+        "        \"name\": \"type\",\r",
+        "        \"control\":\"input\",\r",
+        "        \"stylecol\":\"background-color: #dff0d8\"\r",
+        "    },\r",
+        "     {   \"title\":\"nb days\", \r",
+        "        \"parent\":\"period\",\r",
+        "        \"name\": \"nbday\",\r",
+        "        \"control\":\"text\",\r",
+        "        \"stylecol\":\"background-color: #dff0d8\"\r",
+        "    }\r",
+        "\r",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "checkRule" : {
+      "type" : "json",
+      "value" : [
+        "[ { ",
+        "    \"name\" : \"SumOfNumber\",",
+        "    \"rule\" : \"sumcol\",",
+        "    \"colname\" : \"mynumber\",",
+        "    \"totalsum\" : 100,",
+        "    \"message\": \"The total must be 100\"",
+        "    },",
+        "  { ",
+        "    \"name\" : \"Check Unique country\",",
+        "    \"rule\" : \"uniquecol\",",
+        "    \"colname\" : \"country\",",
+        "    \"message\": \"Each line should have a different country\"",
+        "    },",
+        "    { ",
+        "    \"name\" : \"Check Unique browser\",",
+        "    \"rule\" : \"uniquecol\",",
+        "    \"colname\" : \"browser\",",
+        "    \"message\": \"Each line should have a different browser\"",
+        "    }",
+        "    ",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "headerMultiSelected" : {
+      "type" : "json",
+      "value" : [
+        "[ ",
+        "    {   \"title\":\"\", ",
+        "        \"name\": \"selectedItem\",",
+        "        \"filter\": false, ",
+        "        \"order\": false, ",
+        "        \"control\":\"checkbox\"",
+        "    },",
+        "    ",
+        "    {   \"title\":\"browser\", ",
+        "        \"name\": \"browser\",",
+        "        \"filter\": false, ",
+        "        \"order\": false, ",
+        "        \"control\":\"select\", ",
+        "        \"readonly\": true,",
+        "        \"listoptionkey\":\"key\",",
+        "        \"listoptiondisplay\":\"display\",",
+        "        \"listoptions\": ",
+        "            [ { \"key\": \"IE\", \"display\": \"Internet Explorer\" },",
+        "              { \"key\": \"FIREFOX\", \"display\": \"Firefox Mozilla\" },",
+        "              { \"key\": \"CHROME\", \"display\": \"Chrome\" },",
+        "              { \"key\": \"SMARTBROWSER\", \"display\": \"SmartBrowser\" },",
+        "              { \"key\": \"SAFARI\", \"display\": \"Safari\" },",
+        "              { \"key\": \"MOSAIC\", \"display\": \"Mosaic\" },",
+        "              { \"key\": \"OPERA\", \"display\": \"Opera\" },",
+        "              { \"key\": \"MOZILLA\", \"display\": \"Mozzila\" }",
+        "              ]",
+        "    }, ",
+        "    {   \"title\":\"myNumber\", ",
+        "        \"name\":\"mynumber\", ",
+        "        \"filter\": true, ",
+        "        \"order\": true, ",
+        "        \"control\":\"text\"",
+        "    },",
+        "    {   \"title\":\"Country\", ",
+        "        \"name\": \"country\",",
+        "        \"filter\": true, ",
+        "        \"order\":true, ",
+        "        \"control\":\"text\",",
+        "        \"size\":10",
+        "    }, ",
+        "    {   \"title\":\"market\", ",
+        "        \"name\": \"market\",",
+        "        \"filter\": true, ",
+        "        \"order\":true, ",
+        "        \"control\":\"text\" ",
+        "    }",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "headerValue" : {
+      "type" : "json",
+      "value" : [
+        "[ ",
+        "    {   \"title\":\"browser\", ",
+        "        \"name\": \"browser\",",
+        "        \"filter\": false, ",
+        "        \"order\": false, ",
+        "        \"control\":\"select\", ",
+        "        \"listoptionkey\":\"key\",",
+        "        \"listoptiondisplay\":\"display\",",
+        "        \"listoptions\": ",
+        "            [ { \"key\": \"IE\", \"display\": \"Internet Explorer\" },",
+        "              { \"key\": \"FIREFOX\", \"display\": \"Firefox Mozilla\" },",
+        "              { \"key\": \"CHROME\", \"display\": \"Chrome\" },",
+        "              { \"key\": \"SMARTBROWSER\", \"display\": \"SmartBrowser\" },",
+        "              { \"key\": \"SAFARI\", \"display\": \"Safari\" },",
+        "              { \"key\": \"MOSAIC\", \"display\": \"Mosaic\" },",
+        "              { \"key\": \"OPERA\", \"display\": \"Opera\" },",
+        "              { \"key\": \"MOZILLA\", \"display\": \"Mozzila\" }",
+        "              ]",
+        "    }, ",
+        "    {   \"title\":\"myNumber\", ",
+        "        \"name\":\"mynumber\", ",
+        "        \"filter\": true, ",
+        "        \"order\": true, ",
+        "        \"control\":\"number\",",
+        "        \"footer\":\"sum\"",
+        "    },",
+        "    {   \"title\":\"Country\", ",
+        "        \"name\": \"country\",",
+        "        \"filter\": true, ",
+        "        \"order\":true, ",
+        "        \"control\":\"input\",",
+        "        \"size\":10}, ",
+        "        ",
+        "    {   \"title\":\"status\", ",
+        "        \"name\": \"status\",",
+        "        \"filter\": true, ",
+        "        \"order\": true, ",
+        "        \"control\":\"select\" , ",
+        "        \"listoptionkey\":\"key\",",
+        "        \"listoptiondisplay\":\"value\",",
+        "        \"listoptionsvariable\": \"liststatus\"",
+        "    }, ",
+        "        ",
+        "   ",
+        "    {   \"title\":\"market\", ",
+        "        \"name\": \"market\",",
+        "        \"filter\": true, ",
+        "        \"order\":true, ",
+        "        \"control\":\"text\" },",
+        "    {   \"title\":\"system\", ",
+        "        \"name\":\"system\", ",
+        "        \"filter\": true, ",
+        "        \"order\": true, ",
+        "        \"control\":\"button\" ",
+        "    },",
+        "     {  \"title\":\"mydatetime\", ",
+        "        \"name\":\"mydatetime\", ",
+        "        \"filter\": true, ",
+        "        \"order\": true, ",
+        "        \"control\":\"datetime\" ",
+        "    },",
+        "      {  \"title\":\"hour\", ",
+        "        \"name\":\"myhour\", ",
+        "        \"filter\": true, ",
+        "        \"order\": true, ",
+        "        \"control\":\"hour\" ",
+        "    },",
+        "     {  \"title\":\"password\", ",
+        "        \"name\":\"password\", ",
+        "        \"filter\": true, ",
+        "        \"order\": true, ",
+        "        \"control\":\"password\" ",
+        "    },",
+        "    ",
+        "     {   \"title\":\"myEmail\", ",
+        "        \"name\":\"myemail\", ",
+        "        \"filter\": true, ",
+        "        \"order\": true, ",
+        "        \"control\":\"email\" ",
+        "    },",
+        "     {   \"title\":\"mydate\", ",
+        "        \"name\":\"mydate\", ",
+        "        \"filter\": true, ",
+        "        \"order\": true, ",
+        "        \"control\":\"date\" ",
+        "    }",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "actionsRulesSecond" : {
+      "type" : "json",
+      "value" : [
+        "[",
+        "   {\"name\":\"greenline\",",
+        "          \"action\":\"styleline\",",
+        "          \"attribut\" : \"status\",",
+        "          \"valueattribut\":\"close\",",
+        "          \"variable\":\"showstyleline\",",
+        "          \"valuevariable\":true,",
+        "          \"style\": \"background-color: #4CAF50;readonly: true\"",
+        "   },",
+        "    {\"name\":\"readonly\",",
+        "          \"action\":\"readonlyline\",",
+        "          \"attribut\" : \"status\",",
+        "          \"valueattribut\":\"close\",",
+        "          \"style\": \"background-color: #4CAF50;\"",
+        "   },",
+        "    {\"name\":\"showhistory\",",
+        "          \"action\":\"hideline\",",
+        "          \"variable\" : \"showhistory\",",
+        "          \"valuevariable\" : true,",
+        "          \"attribut\" : \"status\",",
+        "          \"valueattribut\":\"close\"",
+        "   },",
+        "    {\"name\":\"sort\",",
+        "          \"action\":\"sort\",",
+        "          \"sort1\" : \"mynumber\"",
+        "          ",
+        "   }",
+        "   ",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "selectedMultiSelection" : {
+      "type" : "expression",
+      "value" : [
+        "var result={ \"completeItem\" : [], \"indice\":[] };",
+        "",
+        "console.log(\"selectedMultiSelection : collect the line\");",
+        "for (var i in $data.listValue)",
+        "{",
+        "    var line=$data.listValue[ i ];",
+        "    console.log(\"selectedMultiSelection : line[\"+i+\"] selectedItem?\"+line.selectedItem);",
+        "    if (line.selectedItem === true)",
+        "    {",
+        "        result.completeItem.push( line );",
+        "        result.indice.push( i );",
+        "    }",
+        "}",
+        "console.log(\"selectedMultiSelection : end collect\"+angular.toJson( result ));",
+        "",
+        "return result;"
+      ],
+      "exposed" : false
+    },
+    "dynamiclists" : {
+      "type" : "json",
+      "value" : [
+        "{ \"liststatus\" : ",
+        "    [ {\"key\":\"open\", \"value\":\"Open\"} , ",
+        "        {\"key\":\"inprogress\", \"value\":\"In Progress\"}, ",
+        "        {\"key\":\"waiting\", \"value\":\"Waiting\"}, ",
+        "        {\"key\":\"close\", \"value\":\"Close\"} ",
+        "    ],",
+        "    \"showhistory\": false,",
+        "    \"showstyleline\": true",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "listValueSecond" : {
+      "type" : "json",
+      "value" : [
+        "[",
+        "    {   \"country\":\"France_25\",",
+        "        \"browser\":\"FIREFOX\",",
+        "        \"market\":25,",
+        "        \"system\":\"windows\",",
+        "        \"currency\": \"USD\",",
+        "        \"mynumber\": 34,",
+        "        \"status\":\"open\",",
+        "        \"dateorder\": 1458716400000",
+        "",
+        "    },",
+        "    {   \"country\":\"France_38\",",
+        "        \"browser\":\"IE\",",
+        "        \"market\":30,",
+        "        \"system\":\"windows\",",
+        "        \"currency\": \"EURO\",",
+        "        \"mynumber\": 38,",
+        "        \"status\":\"close\",",
+        "        \"dateorder\": 1458716400000",
+        "    },",
+        "     {   \"country\":\"France_45\",",
+        "        \"browser\":\"CHROME\",",
+        "        \"market\":40,",
+        "        \"mynumber\": 45,",
+        "        \"system\":\"windows\",",
+        "        \"status\":\"inprogress\",",
+        "        \"dateorder\": 1458716400000",
+        "    },",
+        "    {   \"country\":\"Germany_76\",",
+        "        \"browser\":\"IE\",",
+        "        \"market\":40,",
+        "        \"mynumber\": 76,",
+        "        \"system\":\"windows\",",
+        "        \"status\" : \"open\",",
+        "        \"dateorder\": 1458716400000",
+        "        ",
+        "    },",
+        "    {   \"country\":\"Germany_65\",",
+        "        \"browser\":\"Firefox\",",
+        "        \"market\":50,",
+        "        \"mynumber\": 65,",
+        "        \"system\":\"windows\",",
+        "        \"status\" : \"waiting\",",
+        "        \"dateorder\": 1458716400000",
+        "",
+        "    }",
+        "        ",
+        "   ",
+        "    ",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "listValue" : {
+      "type" : "json",
+      "value" : [
+        "[",
+        "    {   \"country\":\"France_25\",",
+        "        \"browser\":\"FIREFOX\",",
+        "        \"market\":25,",
+        "        \"system\":\"windows\",",
+        "        \"currency\": \"USD\",",
+        "        \"mynumber\": 34,",
+        "        \"status\":\"open\",",
+        "        \"dateorder\": \"1459359823647\"",
+        "    },",
+        "    {   \"country\":\"France_38\",",
+        "        \"browser\":\"IE\",",
+        "        \"market\":30,",
+        "        \"system\":\"windows\",",
+        "        \"currency\": \"EURO\",",
+        "        \"mynumber\": 38,",
+        "        \"status\":\"close\",",
+        "         \"dateorder\": \"1459359823647\"",
+        "    },",
+        "     {   \"country\":\"France_45\",",
+        "        \"browser\":\"CHROME\",",
+        "        \"market\":40,",
+        "        \"mynumber\": 45,",
+        "",
+        "        \"system\":\"windows\",",
+        "        \"status\":\"inprogress\"",
+        "    },",
+        "    {   \"country\":\"Germany_76\",",
+        "        \"browser\":\"IE\",",
+        "        \"market\":40,",
+        "        \"mynumber\": 76,",
+        "        \"system\":\"windows\",",
+        "        \"status\" : \"open\"",
+        "    },",
+        "    {   \"country\":\"Germany_65\",",
+        "        \"browser\":\"Firefox\",",
+        "        \"market\":50,",
+        "        \"mynumber\": 65,",
+        "        \"system\":\"windows\",",
+        "        \"status\" : \"waiting\"",
+        "    }",
+        "        ",
+        "   ",
+        "    ",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "valueChildren" : {
+      "type" : "json",
+      "value" : [
+        "[\r",
+        "\t{\r",
+        "\t\"firstname\":\"Walter\",\r",
+        "\t\"lastname\":\"Bates\",\r",
+        "\t\"details\": { \"ssn\":\"5553355\" },\r",
+        "\t\"period\": [ {\"type\":\"RTT\",\"nbday\":24 },\r",
+        "\t\t   {\"type\":\"VAC\",\"nbday\":24 },\r",
+        "\t\t{\"type\":\"RECUP\",\"nbday\":24 }\r",
+        "\t\t]\r",
+        "\t},\r",
+        "\t{\r",
+        "\t\t\"firstname\":\"Helen\",\r",
+        "\t\t\"lastname\":\"Kelly\",\r",
+        "\t\t\"details\": { \"ssn\":\"2222\" },\r",
+        "\t\t\"period\": []\r",
+        "\t},\r",
+        "\t{\r",
+        "\t\t\"firstname\":\"Jan\",\r",
+        "\t\t\"lastname\":\"Fisher\",\r",
+        "\t\t\"details\": { \"ssn\":\"4444\" },\r",
+        "\t\t\"period_bearwidget\":true,\r",
+        "\t\t\"period\": \r",
+        "\t\t[ {\"type\":\"RTT\",\"nbday\":24 },\r",
+        "\t\t\t{\"type\":\"RECUP\",\"nbday\":24 }\r",
+        "\t\t]\r",
+        "\t}\r",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "parameters" : {
+      "type" : "json",
+      "value" : [
+        "{ \"showdebug\":false}"
+      ],
+      "exposed" : false
+    },
+    "listValueGraph" : {
+      "type" : "json",
+      "value" : [
+        "[{",
+        " \"marketie\": 12,",
+        " \"marketchrome\": 12,",
+        " \"marketfirefox\": 12",
+        "}",
+        "]"
+      ],
+      "exposed" : false
+    },
+    "actionsRulesMultiSelected" : {
+      "type" : "json",
+      "value" : [
+        "[",
+        "   {\"name\":\"lineSelected\",",
+        "          \"action\":\"styleline\",",
+        "          \"attribut\" : \"selectedItem\",",
+        "          \"valueattribut\": true,",
+        "          \"style\": \"background-color: #c8e5bc\"",
+        "   }",
+        "  ]"
+      ],
+      "exposed" : false
+    },
+    "selectVariable" : {
+      "type" : "json",
+      "value" : [
+        "[ { \"name\": \"A\", \"value\": 2 },",
+        "              { \"name\": \"B\", \"value\": 4 },",
+        "              { \"name\": \"C\", \"value\": 8 } ]"
+      ],
+      "exposed" : false
+    },
+    "headerValueSecond" : {
+      "type" : "json",
+      "value" : [
+        "[ \r",
+        "     {   \"title\":\"myNumber\", \r",
+        "        \"name\":\"mynumber\", \r",
+        "        \"control\":\"number\",\r",
+        "        \"footer\":\"sum\",\r",
+        "        \"size\" : 40,\r",
+        "        \"styleheader\":\"background-color: #007DB3\",\r",
+        "        \"stylecol\":\"background-color: #F2DEDE\"\r",
+        "    },\r",
+        "    {   \"title\":\"Country\", \r",
+        "        \"name\": \"country\",\r",
+        "        \"control\":\"input\",\r",
+        "        \"styleheader\":\"background-color: #007DB3\",\r",
+        "        \"size\":10}, \r",
+        "        \r",
+        "    {   \"title\":\"browser\", \r",
+        "        \"name\": \"browser\",\r",
+        "        \"control\":\"select\", \r",
+        "        \"listoptionkey\":\"key\",\r",
+        "        \"listoptiondisplay\":\"display\",\r",
+        "        \"listoptions\": \r",
+        "            [ { \"key\": \"IE\", \"display\": \"Internet Explorer\" },\r",
+        "              { \"key\": \"FIREFOX\", \"display\": \"Firefox Mozilla\" },\r",
+        "              { \"key\": \"CHROME\", \"display\": \"Chrome\" },\r",
+        "              { \"key\": \"SMARTBROWSER\", \"display\": \"SmartBrowser\" },\r",
+        "              { \"key\": \"SAFARI\", \"display\": \"Safari\" },\r",
+        "              { \"key\": \"MOSAIC\", \"display\": \"Mosaic\" },\r",
+        "              { \"key\": \"OPERA\", \"display\": \"Opera\" },\r",
+        "              { \"key\": \"MOZILLA\", \"display\": \"Mozzila\" }\r",
+        "              ],\r",
+        "        \"styleheader\":\"background-color: #007DB3\"\r",
+        "              \r",
+        "    }, \r",
+        "\r",
+        "  \r",
+        "     {   \"title\":\"date Order\", \r",
+        "        \"name\": \"dateorder\",\r",
+        "        \"readonly\":true,\r",
+        "        \"control\":\"datelong\",\r",
+        "        \"styleheader\":\"background-color: #99D9EA\",\r",
+        "        \"stylecol\":\"background-color: #99D9EA\"\r",
+        "        \r",
+        "    },\r",
+        "     {   \"title\":\"Update date\", \r",
+        "        \"name\": \"dateorder\",\r",
+        "        \"control\":\"datelong\",\r",
+        "        \"styleheader\":\"background-color: #007DB3\"\r",
+        "    }\r",
+        "\r",
+        "    \r",
+        "        \r",
+        "]"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "59f4c0be-04a7-4fe8-8a83-98bfa7147e3b",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer",
+  "displayName" : "testBearTable"
+}

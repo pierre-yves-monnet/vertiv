@@ -6,9 +6,11 @@
  * 
  * You can leave the controller empty if you do not need it.
  */
-function BearTable ($scope, $filter) {
+function BearTable ($scope, $filter, modalService) {
 
     var ctrl=this;
+    
+    this.modalService = modalService;
     
 	this.message='';
 	
@@ -67,7 +69,7 @@ function BearTable ($scope, $filter) {
     //---------
 	// Return the InitValue
 	this.getWSelectDateLongInitValue = function(header, valueDate) {
-		console.log( "getWSelectDateLongInitValue: Header["+header+"] Value="+JSON.stringify(valueDate)+"]");
+		//console.log( "getWSelectDateLongInitValue: Header["+header+"] Value="+JSON.stringify(valueDate)+"]");
 		if (! this.isHeaderDate( header ))
 			return valueDate;
 	
@@ -77,7 +79,7 @@ function BearTable ($scope, $filter) {
 		if (isNaN(valueDate) && isFinite(valueDate))
 			return null;
 		
-		console.log( "getWSelectDateLongInitValue: valueDate["+JSON.stringify(valueDate)+"]");
+		//console.log( "getWSelectDateLongInitValue: valueDate["+JSON.stringify(valueDate)+"]");
 		var dateObject=null;
 		try
 		{
@@ -117,7 +119,7 @@ function BearTable ($scope, $filter) {
 	    {
 			// 
 			if (header.name === 'assigned_to')
-				console.log("########################### Wiged Bar : getWSelectDisplayFromItem= "+ JSON.stringify( optionItem ));
+				this.logBear(false, "########################### Wiged Bar : getWSelectDisplayFromItem= "+ JSON.stringify( optionItem ));
 
             if (header.listoptiondisplay===null)
             {
@@ -562,9 +564,20 @@ function BearTable ($scope, $filter) {
    }
    this.getBtnLabel = function( header, oneRecord, defaultLabel )
    {
-	if (typeof header.btnLabel !== 'undefined' && header.btnLabel !== null)
-		return header.btnLabel;
-	return defaultLabel;
+        var btnLabel = defaultLabel;
+       
+        if ((header.control !== undefined)&&(header.control === "button")) {
+            if ((typeof oneRecord[header.name].btnLabel !== 'undefined') && (oneRecord[header.name].btnLabel !== null)) {
+	            btnLabel = oneRecord[header.name].btnLabel;
+	        }
+        }
+        else {
+	        if (typeof header.btnLabel !== 'undefined' && header.btnLabel !== null) {
+	            btnLabel = header.btnLabel;
+	        }
+        }
+	
+	return btnLabel;
    }
    
    this.getBtnCss = function( header, oneRecord, defaultStyle )
@@ -573,6 +586,7 @@ function BearTable ($scope, $filter) {
 		return header.cssClass ;
 	return defaultStyle;
    }
+   
    this.btnInsert = function (header, oneRecord, isAdd) {
 
 		var index=-1;
@@ -623,9 +637,38 @@ function BearTable ($scope, $filter) {
 		}
 		this.prepareData();
    }
+
+   this.btnClick = function (header, oneRecord) {
+       //console.log ("[DEBUG]: header before call="+JSON.stringify(header));
+       //console.log ("[DEBUG]: oneRecord="+JSON.stringify(oneRecord));
+	   if ((oneRecord !== undefined)&&(oneRecord[header.name] !== undefined)&&(typeof oneRecord[header.name].click_hndlr_name !== "undefined")) {
+		   // click_hndlr should be the name of a function that takes
+		   // $scope, header and oneRecord as arguments
+		   window[oneRecord[header.name].click_hndlr_name].call (this, $scope, header, oneRecord);
+	   }
+   }
+   
+   this.getBtnWidth = function (header, oneRecord) {
+       var ret_val = "auto";
+       
+       if ((oneRecord != undefined)&&(oneRecord[header.name] !== undefined)&&(oneRecord[header.name].width !== undefined)) {
+           ret_val = oneRecord[header.name].width;
+       }
+       
+       return ret_val;
+   }
   
 	// ------------------- control
 	
+	this.getCtrlHide = function (header, oneRecord) {
+	   var ret_val = false;
+
+	   if ((oneRecord !== undefined)&&(oneRecord[header.name] !== undefined)&&(oneRecord[header.name].hide !== undefined)) {
+		   ret_val = oneRecord[header.name].hide;
+	   }
+
+	   return ret_val;
+   }
 	
 	// widget SELECT : return the list of option for the header. Return a list like [{key:"IE", display:"Internet"},{key:"CHROME",display:"Chrome" },{key:"FIREFOX", display:"Firefox" }]
 	//   Note at this moment, we don't know which attribut is the DISPLAY and which is the KEY
@@ -783,7 +826,7 @@ function BearTable ($scope, $filter) {
 		{
 			// setup the pagination to the first range
 			var stepsPagination= this.getStepsPagination();
-			console.log(" calculate recorditemsperpage from "+angular.toJson( stepsPagination) );
+			//console.log(" calculate recorditemsperpage from "+angular.toJson( stepsPagination) );
 			this.recorditemsperpage= stepsPagination[0].value;
 			this.logBear(false, "PrepareData : setup the pagination to the first Range ["+this.recorditemsperpage+"]");
 		}
@@ -807,7 +850,7 @@ function BearTable ($scope, $filter) {
 		if (header.control === 'date') {
 			var timeRow = oneRecord[ header.name ];
 			this.logBearHeader(header, false, "prepareData/date: timeRow["+timeRow+"]");
-			if (timeRow !== 'undefined' && timeRow !== null && timeRow.length < 11)
+			if ((timeRow !== undefined) && (timeRow !== null) && (timeRow.length < 11))
 			{
 				timeRow = timeRow.toString()+"T08:00:00.000Z";
 				oneRecord[ header.name ] = timeRow;
@@ -837,8 +880,8 @@ function BearTable ($scope, $filter) {
 			this.logBearHeader(header,false, "prepareData/manager headerControlSelect value["+angular.toJson( oneRecord[ header.name]) +"] found selected:"+angular.toJson( selected)+" List "+angular.toJson( listOptionsItem) );
 			
 			
-			console.log( "prepareData/manager headerControlSelect ["+header.name+"] value["+oneRecord[ header.name]+"] found selected:"+angular.toJson( selected)+" List "+angular.toJson( listOptionsItem) );
-			console.log("  header.listoptionsvariable="+header.listoptionsvariable+" list="+angular.toJson( $scope.properties.dynamicLists ));
+			//console.log( "prepareData/manager headerControlSelect ["+header.name+"] value["+oneRecord[ header.name]+"] found selected:"+angular.toJson( selected)+" List "+angular.toJson( listOptionsItem) );
+			//console.log("  header.listoptionsvariable="+header.listoptionsvariable+" list="+angular.toJson( $scope.properties.dynamicLists ));
 			  
 			oneRecord[ header.name+'_select' ] = selected;						
 		}
@@ -874,7 +917,7 @@ function BearTable ($scope, $filter) {
 	// ------------------- pagination 
 	this.isShowPagination = function() {
 		var showPagination = this.getStepsPagination() != null;
-		console.log("isShowPagination :"+showPagination);
+		//console.log("isShowPagination :"+showPagination);
 	    return showPagination;
 	}
 	
@@ -882,8 +925,11 @@ function BearTable ($scope, $filter) {
 		var stepsPagination=$scope.properties.pagination;
 		
 		// console.log("getPagination : start");
-		if ($scope.properties.pagination == null || typeof $scope.properties.pagination === 'undefined')
+		if (typeof stepsPagination === 'undefined' || stepsPagination == null || (stepsPagination.length === 0))
 			return null;
+
+        if (typeof stepsPagination[ 0 ]== 'undefined' || stepsPagination[ 0 ] == null)
+        	return null;
 
 		// if the user give a constante (so a String) with the JSON, let's give a chance to translate it to a real Array
 		var step0 = stepsPagination[0].value;
@@ -938,8 +984,8 @@ function BearTable ($scope, $filter) {
 		    this.endTime(timeBegin, "getRecordsPage - no Headers");
             return null;
 	    }
-	    console.log("===== getRecordsPage : ="+ $scope.properties.value);
-		console.log("getRecordsPage : ="+ angular.toJson($scope.properties.value,true));
+	    //console.log("===== getRecordsPage : ="+ $scope.properties.value);
+		//console.log("getRecordsPage : ="+ angular.toJson($scope.properties.value,true));
 	    //console.log("getRecordsPage : Orderby:"+this.orderByField+" - direction : "+this.reverseSort);
 	    var listOrdered = [];
 	    for (var i=0; i<$scope.properties.value.length; i++){
@@ -1016,14 +1062,14 @@ function BearTable ($scope, $filter) {
 			}
 		}
 		  
-		console.log(' listrecordsFlat='+angular.toJson(this.listrecordsFlat));
+		//console.log(' listrecordsFlat='+angular.toJson(this.listrecordsFlat));
 	    if (this.isShowPagination() )
 	    {
 			// be sure this is not a String
 			this.recorditemsperpage = parseInt( this.recorditemsperpage);
 		    var begin = ((this.recordpagenumber - 1) * this.recorditemsperpage);
 		    var end =  begin + this.recorditemsperpage;
-	        console.log("Result After Filter begin/end="+begin+"/"+end+":"+ angular.toJson(this.listFlat , true));
+	        //console.log("Result After Filter begin/end="+begin+"/"+end+":"+ angular.toJson(this.listFlat , true));
 			this.endTime(timeBegin, "getRecordsPage - ShowPagination from begin["+begin+"] to end["+end+"] recorditemsperpage=["+this.recorditemsperpage+"] nblines["+this.listrecordsFlat.length+"]");
 
     		return this.listrecordsFlat.slice(begin, end);
@@ -1035,7 +1081,17 @@ function BearTable ($scope, $filter) {
 	
 	
    
-	//-------------------------- getter
+	//-------------------------- getters
+	this.getLinkName  = function( header, oneRecord)
+	{
+		if (typeof oneRecord[ header.name+"_link"] !== 'undefined')
+			return oneRecord[ header.name+"_link"];
+		if (typeof header.link !== 'undefined')
+			return header.link;
+		if (typeof header.title !== 'undefined')
+			return header.title;
+		return 'Access';
+	}
 	this.getSubtitle = function( header, oneRecord)
 	{	
 		if (typeof oneRecord[ header.name+"_subtitle"] !== 'undefined')
@@ -1093,7 +1149,7 @@ function BearTable ($scope, $filter) {
 	
 	this.getTableCss = function () {
 		var cssClass=$scope.properties.tablecssclass;
-		if (typeof $scope.properties.tablecssclass === 'undefined' || $scope.properties.tablecssclass ==='') {
+		if (typeof $scope.properties.tablecssclass === 'undefined' || $scope.properties.tablecssclass === null|| $scope.properties.tablecssclass === '') {
 			cssClass="table table-striped table-hover";
 		}
 		this.logBear(false, "TableCSS ["+cssClass+"]");
