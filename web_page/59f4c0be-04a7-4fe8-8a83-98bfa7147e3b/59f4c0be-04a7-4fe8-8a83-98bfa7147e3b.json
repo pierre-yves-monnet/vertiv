@@ -3,7 +3,7 @@
   "previousDesignerVersion" : "1.8.29",
   "id" : "59f4c0be-04a7-4fe8-8a83-98bfa7147e3b",
   "name" : "testBearTable",
-  "lastUpdate" : 1588205180398,
+  "lastUpdate" : 1588289610722,
   "rows" : [
     [
       {
@@ -229,6 +229,21 @@
                       },
                       "actionsRules" : {
                         "type" : "constant"
+                      },
+                      "pagination" : {
+                        "type" : "constant",
+                        "value" : [
+                          "[ {\"name\" : \"10 lines\"",
+                          "\"value\":10}",
+                          "{\"name\" : \"50 lines\"",
+                          "\"value\":50}",
+                          "{\"name\" : \"100 lines\"",
+                          "\"value\":100} ]"
+                        ]
+                      },
+                      "labelHidden" : {
+                        "type" : "constant",
+                        "value" : true
                       }
                     },
                     "reference" : "95bf1187-2329-439c-bdf0-ba5adffcc8ed",
