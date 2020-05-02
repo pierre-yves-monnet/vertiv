@@ -13,18 +13,18 @@ Deploy the BDM
 Deploy the process
 
 # Configuration
-Creates theses Gasoline requests:
-ID: listCustomers
-REQUEST: select * from customer
-DATASOURCE : java:comp/env/NotManagedBizDataDS
+Creates theses Gasoline requests:  
+ID: listCustomers  
+REQUEST: select * from customer  
+DATASOURCE : java:comp/env/NotManagedBizDataDS  
   
-ID: listOpportunityType
+ID: listOpportunityType  
 REQUEST: select * from OPPORTUNITYTYPE  
-DATASOURCE : java:comp/env/NotManagedBizDataDS
+DATASOURCE : java:comp/env/NotManagedBizDataDS  
 
-ID: listPriceList
-REQUEST: select * from PRICELIST   
-DATASOURCE : java:comp/env/NotManagedBizDataDS
+ID: listPriceList  
+REQUEST: select * from PRICELIST  
+DATASOURCE : java:comp/env/NotManagedBizDataDS  
 
 ID: listItems
 REQUEST: select * from ITEM    
