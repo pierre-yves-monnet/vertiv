@@ -3,7 +3,7 @@ vertiv POC
 
 # Deployment
 Deploy the REST API CONTEXT
-  https://github.com/Bonitasoft-Community/restapi_context/releases/download/2.13/ContextAccess-2.13.zip
+  https://github.com/Bonitasoft-Community/restapi_context/releases/download/2.13/ContextAccess-2.13.1.zip
 
 Deploy the Gasoline page
   https://github.com/Bonitasoft-Community/page_gasolinetruck/releases/download/1.6.3/CustomPageGasoline-1.6.3.zip
@@ -26,6 +26,7 @@ ID: listPriceList
 REQUEST: select * from PRICELIST  
 DATASOURCE : java:comp/env/NotManagedBizDataDS  
 
-ID: listItems
-REQUEST: select * from ITEM    
-DATASOURCE : java:comp/env/NotManagedBizDataDS
+ID: listItems  
+REQUEST: select * from ITEM  
+DATASOURCE : java:comp/env/NotManagedBizDataDS  
+
