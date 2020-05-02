@@ -1,0 +1,72 @@
+{
+  "designerVersion" : "1.10.12",
+  "previousDesignerVersion" : "1.2.19",
+  "id" : "customShowHide",
+  "name" : "showHide",
+  "lastUpdate" : 1588362670178,
+  "template" : "@customShowHide.tpl.html",
+  "icon" : "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 20'><g><path fill='#fff' d='M17,18V2h16v16H17z M16,1v18h18V1H16z M19,11l4,4l8-7l-1.7-1.7l-6.5,6.2l-2.8-2.8L19,11z'/></g></svg>",
+  "controller" : "@customShowHide.ctrl.js",
+  "description" : "Unique checkbox for an option. The user checks it or not",
+  "custom" : true,
+  "order" : 8,
+  "properties" : [
+    {
+      "label" : "Read-only",
+      "name" : "disabled",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Required",
+      "name" : "required",
+      "help" : "In the context of a form container, use $form.$invalid as a Boolean to check form validity in a widget property",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Label",
+      "name" : "label",
+      "type" : "text",
+      "defaultValue" : "Default label",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Value",
+      "name" : "value",
+      "caption" : "Must be a Boolean",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Label visible when the chevron is of",
+      "name" : "labeltoshow",
+      "type" : "text",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "label to show when the chevron is on",
+      "name" : "labeltohide",
+      "type" : "text",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "class label to hide",
+      "name" : "classlabeltohide",
+      "type" : "text",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "class label to show",
+      "name" : "classlabeltoshow",
+      "type" : "text",
+      "bond" : "interpolation"
+    }
+  ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

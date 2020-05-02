@@ -1,0 +1,16 @@
+<div class="checkbox">
+    <!-- <input type="checkbox" name="{{ctrl.name}}" ng-model="properties.value" ng-disabled="properties.disabled"> -->
+    <span ng-show="properties.value == true">
+        <a href="" ng-click="ctrl.switch(false)" ng-disabled="properties.disabled">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+            <span ng-class="properties.classlabeltohide">{{ properties.labeltohide | uiTranslate }}</span>
+        </a>
+    </span>
+    <span ng-show="properties.value == false">
+        <a href="" ng-click="ctrl.switch(true)" ng-disabled="properties.disabled">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span ng-class="properties.classlabeltoshow">{{ properties.labeltoshow | uiTranslate }}</span>
+        </a>
+    </span>
+     {{ properties.label | uiTranslate }}
+</div>
