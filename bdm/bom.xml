@@ -265,11 +265,13 @@
             <indexes/>
         </businessObject>
         <businessObject qualifiedName="com.vertiv.model.OpportunityQuote">
+            <description>CustomerSold : it must be a Relation to the customper of course&#xD;
+UI Designer does not have any tool to do that, so it must have a lot of JS to do it. Keep in stupid and simple for the POC</description>
             <fields>
                 <field type="LONG" length="255" name="quoteNumber" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="revision" nullable="true" collection="false"/>
                 <field type="DOUBLE" length="255" name="revenue" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.vertiv.model.Customer" fetchType="LAZY" name="customerSold" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="customerSoldName" nullable="true" collection="false"/>
                 <field type="DATE" length="255" name="submittedDate" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="opportunityRollup" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="priceList" nullable="true" collection="false"/>
@@ -282,8 +284,10 @@
             <indexes/>
         </businessObject>
         <businessObject qualifiedName="com.vertiv.model.OpportunityQuoteItem">
+            <description>item : it must be a Relation to the customper of course&#xD;
+UI Designer does not have any tool to do that, so it must have a lot of JS to do it. Keep in stupid and simple for the POC</description>
             <fields>
-                <relationField type="AGGREGATION" reference="com.vertiv.model.Item" fetchType="LAZY" name="item" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="itemCode" nullable="true" collection="false"/>
                 <field type="DOUBLE" length="255" name="quantity" nullable="true" collection="false"/>
                 <field type="DOUBLE" length="255" name="unitPrice" nullable="true" collection="false"/>
                 <field type="DOUBLE" length="255" name="discount" nullable="true" collection="false"/>
@@ -299,6 +303,22 @@
             </fields>
             <uniqueConstraints>
                 <uniqueConstraint name="UNIQUE_CONSTRAINT_1">
+                    <fieldNames>
+                        <fieldName>name</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.vertiv.model.PriceList">
+            <fields>
+                <field type="STRING" length="255" name="name" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="description" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="discount" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="UNIQUE_CONSTRAINT_3">
                     <fieldNames>
                         <fieldName>name</fieldName>
                     </fieldNames>
@@ -541,22 +561,6 @@ Possible status are: pending, approved, refused and cancelled.</description>
                     </queryParameters>
                 </query>
             </queries>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.vertiv.model.PriceList">
-            <fields>
-                <field type="STRING" length="255" name="name" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="description" nullable="true" collection="false"/>
-                <field type="DOUBLE" length="255" name="discount" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints>
-                <uniqueConstraint name="UNIQUE_CONSTRAINT_3">
-                    <fieldNames>
-                        <fieldName>name</fieldName>
-                    </fieldNames>
-                </uniqueConstraint>
-            </uniqueConstraints>
-            <queries/>
             <indexes/>
         </businessObject>
     </businessObjects>

@@ -2,7 +2,7 @@
   "designerVersion" : "1.10.54",
   "id" : "VertilPOC",
   "name" : "VertilPOC",
-  "lastUpdate" : 1588382793454,
+  "lastUpdate" : 1588453923761,
   "rows" : [
     [
       {
@@ -428,8 +428,8 @@
                           "value" : ""
                         },
                         "readOnly" : {
-                          "type" : "expression",
-                          "value" : "formControl.readonly.revenue"
+                          "type" : "constant",
+                          "value" : true
                         },
                         "labelHidden" : {
                           "type" : "constant",
@@ -812,7 +812,7 @@
                         },
                         "hidden" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "labelHidden" : {
                           "type" : "constant",
@@ -934,7 +934,7 @@
                               },
                               "type" : {
                                 "type" : "constant",
-                                "value" : "text"
+                                "value" : "number"
                               },
                               "min" : {
                                 "type" : "constant"
@@ -952,7 +952,7 @@
                                 "type" : "constant"
                               }
                             },
-                            "reference" : "1e87ab3e-5056-49de-9e49-c18e10ee278c",
+                            "reference" : "91fe163c-83c6-496f-9f59-b06cbbac2c39",
                             "hasValidationError" : false,
                             "id" : "customInputPlus"
                           },
@@ -1032,7 +1032,7 @@
                                 "type" : "constant"
                               }
                             },
-                            "reference" : "8939428f-1377-402e-8acf-cee180c47418",
+                            "reference" : "44f1c3fa-c5d2-410e-b885-6d56607e49d5",
                             "hasValidationError" : false,
                             "id" : "customInputPlus"
                           }
@@ -1169,7 +1169,7 @@
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : "selectedQuote.customerSold"
+                                "value" : "selectedQuote.customerSoldName"
                               }
                             },
                             "reference" : "1ffda7c8-2771-454f-aba1-ef74ddf483f6",
@@ -1655,7 +1655,7 @@
                                 "value" : ""
                               }
                             },
-                            "reference" : "aef1188f-30da-4672-b7b3-170edde4a926",
+                            "reference" : "7d1fb9f1-f822-4f12-8acd-b5f1bc88d722",
                             "hasValidationError" : false,
                             "id" : "pbContainer",
                             "rows" : [
@@ -1682,7 +1682,7 @@
                                       "value" : ""
                                     }
                                   },
-                                  "reference" : "c60ed1fe-b7ca-452c-8da4-cb410184105f",
+                                  "reference" : "90ad0b58-0eb0-4730-a0e5-96b815d8b248",
                                   "hasValidationError" : false,
                                   "id" : "pbContainer",
                                   "rows" : [
@@ -2131,7 +2131,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "a9e666a1-c7db-4611-8e0a-3badca5bed6d",
+                "reference" : "155253c7-7580-4cf3-afdd-79bfaa47da5b",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -2170,7 +2170,7 @@
                           "value" : "formInput.opportunity.notifyOwner"
                         }
                       },
-                      "reference" : "a13550b8-fe11-4fa7-98c2-4b0a515ce1e2",
+                      "reference" : "5fba2c6f-760b-46b5-b2ef-24ca6ea60ed5",
                       "hasValidationError" : false,
                       "id" : "pbCheckbox"
                     },
@@ -2208,7 +2208,7 @@
                           "value" : "formInput.opportunity.notifySales"
                         }
                       },
-                      "reference" : "9a117e77-4539-49fc-b314-06b30f58f380",
+                      "reference" : "5c185a7f-ff6c-4861-84e7-8de0626f1ef8",
                       "hasValidationError" : false,
                       "id" : "pbCheckbox"
                     },
@@ -2246,7 +2246,7 @@
                           "value" : "formInput.opportunity.notifyOfferFinalization"
                         }
                       },
-                      "reference" : "175d218d-b0be-4af5-9fb4-e313240b5a0a",
+                      "reference" : "744af85c-a49a-4cff-953e-cc0ab34f7356",
                       "hasValidationError" : false,
                       "id" : "pbCheckbox"
                     }
@@ -2281,7 +2281,7 @@
                   },
                   "buttonStyle" : {
                     "type" : "constant",
-                    "value" : "primary"
+                    "value" : "info"
                   },
                   "readOnly" : {
                     "type" : "constant",
@@ -2289,7 +2289,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Submit"
+                    "value" : "Create a request"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -2388,7 +2388,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "4b606480-0449-492a-8d81-4aa4782cc9c9",
+                "reference" : "eff6fcfe-b5f6-4e25-9164-ac3c24f953b8",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -2411,8 +2411,8 @@
                           "value" : false
                         },
                         "disabled" : {
-                          "type" : "constant",
-                          "value" : false
+                          "type" : "expression",
+                          "value" : "$form.$invalid"
                         },
                         "label" : {
                           "type" : "interpolation",
@@ -2478,7 +2478,7 @@
                           "type" : "variable"
                         }
                       },
-                      "reference" : "2159d6c9-827d-4b2c-84ea-be6c95f661d8",
+                      "reference" : "abf5506b-d443-41e2-be8d-6560a6ba94f1",
                       "hasValidationError" : false,
                       "id" : "pbButton"
                     },
@@ -2500,8 +2500,8 @@
                           "value" : false
                         },
                         "disabled" : {
-                          "type" : "constant",
-                          "value" : false
+                          "type" : "expression",
+                          "value" : "$form.$invalid"
                         },
                         "label" : {
                           "type" : "interpolation",
@@ -2567,7 +2567,128 @@
                           "type" : "variable"
                         }
                       },
-                      "reference" : "f696ff61-3644-45d6-b94d-db7ba5021888",
+                      "reference" : "8d9aad1f-13ea-4f49-b5f0-af24cbdcb7cb",
+                      "hasValidationError" : false,
+                      "id" : "pbButton"
+                    }
+                  ]
+                ]
+              }
+            ],
+            [
+              {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "expression",
+                    "value" : "formControl.hidden.validateButton"
+                  },
+                  "repeatedCollection" : {
+                    "type" : "variable",
+                    "value" : ""
+                  }
+                },
+                "reference" : "70587f74-e5ad-4799-a579-6563814f9b6e",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "disabled" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Validate"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "center"
+                        },
+                        "buttonStyle" : {
+                          "type" : "constant",
+                          "value" : "info"
+                        },
+                        "action" : {
+                          "type" : "constant",
+                          "value" : "Submit task"
+                        },
+                        "assign" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "url" : {
+                          "type" : "interpolation"
+                        },
+                        "responseStatusCode" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "dataToSend" : {
+                          "type" : "expression",
+                          "value" : "formOutput"
+                        },
+                        "dataFromSuccess" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "closeOnSuccess" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "dataFromError" : {
+                          "type" : "variable",
+                          "value" : "formOutput._submitError"
+                        },
+                        "targetUrlOnSuccess" : {
+                          "type" : "interpolation"
+                        },
+                        "collectionToModify" : {
+                          "type" : "variable"
+                        },
+                        "modalId" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "collectionPosition" : {
+                          "type" : "constant",
+                          "value" : "Last"
+                        },
+                        "valueToAdd" : {
+                          "type" : "constant"
+                        },
+                        "removeItem" : {
+                          "type" : "variable"
+                        }
+                      },
+                      "reference" : "9273261b-5d97-4683-abe6-ed6d283bfe9e",
                       "hasValidationError" : false,
                       "id" : "pbButton"
                     }
@@ -3395,22 +3516,21 @@
         "\t\t'buttonAddRevision':true,\r",
         "\t\t'insertItem':true,\r",
         "\t\t'submitCase':true,\r",
-        "\t\t'validateOrNot':true\r",
+        "\t\t'validateOrNot':true,\r",
+        "\t\t'validateButton':true\r",
         "\t\t},\r",
         "    \"isReady\" : false\r",
         "};\r",
         "\r",
         "\r",
         "\r",
-        "console.log(\"--------- Start FormControl ------------------\");\r",
         "if (! $data.formInput) {\r",
         "    console.log(\"--------- Wait formInput, return\");\r",
         "    return formControl;    \r",
         "}\r",
         "formControl.isReady = true;\r",
         "\r",
-        "console.log(\"  isProcessInstanciation ? \"+ $data.formInput.context.isProcessInstanciation+\" =>\"+angular.toJson($data.formInput.context));\r",
-        "console.log(\" formCode=[\"+$data.formInput.formCode+\"]\");\r",
+        "console.log(\"--------- Start FormControl ------------------ formCode=[\"+$data.formInput.formCode+\"]\");\r",
         "\r",
         "if ($data.formInput.context.isProcessInstanciation == true ) {\r",
         "    console.log(\" localization : isProcessInstanciation\");\r",
@@ -3432,15 +3552,19 @@
         "\tformControl.hidden.opportunityType = true;\r",
         "\tformControl.hidden.validateOrNot = false;\r",
         "\tformControl.hidden.notification = true;\r",
-        "\r",
+        "\t\r",
+        "\tlistItemInReadOnly( $data.itemList );\r",
         "\r",
         "}\r",
         "\r",
-        "if ($data.formInput.formCode === 'ADDITIONALINFO') {\r",
+        "else if ($data.formInput.formCode === 'ADDITIONALINFO') {\r",
+        "\tconsole.log(\" localization : ADDITIONALINFO\");\r",
+        "\r",
         "\tformControl.hidden.notification = true;\r",
         "\tformControl.hidden.opportunityType = true;\r",
         "\tformControl.hidden.buttonAddRevision=false;\r",
         "\tformControl.hidden.insertItem=false;\r",
+        "\tformControl.hidden.validateButton=false;\r",
         "\t\r",
         "\tformControl.readonly.quotenumber = false;\r",
         "\tformControl.readonly.revision = false;\r",
@@ -3450,24 +3574,55 @@
         "\t\t\r",
         "}\r",
         "if ($data.formInput.formCode === 'OPPORTUNITY') {\r",
-        "\t\tformControl.readonly.notification = false;\r",
-        "\t\tformControl.readonly.opportunityType= false;\r",
-        "\t\tformControl.hidden.buttonAddRevision=true;\r",
+        "\tformControl.readonly.notification = false;\r",
+        "\tformControl.readonly.opportunityType= false;\r",
+        "\tformControl.hidden.buttonAddRevision=true;\r",
+        "\tformControl.hidden.validateButton=false;\r",
+        "\t\t\r",
+        "\tlistItemInReadOnly( $data.itemList );\r",
+        "\r",
         "\r",
         "}\r",
         "if ($data.formInput.formCode === 'FINALIZEOFFER') {\r",
+        "\tformControl.hidden.notification = true;\r",
+        "\tformControl.hidden.validateButton=false;\r",
+        "\t\r",
         "}\r",
         "if ($data.formInput.formCode === 'IDENTIFYITEMCODES') {\r",
+        "\tformControl.hidden.notification = true;\r",
+        "\tlistItemInReadOnly( $data.itemList );\r",
+        "\tformControl.hidden.validateButton=false;\r",
+        "\t\r",
         "}\r",
         "if ($data.formInput.formCode === 'GENERATERECOMMENDEDSPACEPART') {\r",
+        "\tformControl.hidden.notification = true;\r",
+        "\tlistItemInReadOnly( $data.itemList );\r",
+        "\tformControl.hidden.validateButton=false;\r",
+        "\t\r",
         "}\r",
         "if ($data.formInput.formCode === 'PRICEITEM') {\r",
+        "\tformControl.hidden.notification = true;\r",
+        "\tlistItemInReadOnly( $data.itemList );\r",
+        "\tformControl.hidden.validateButton=false;\r",
+        "\t\r",
         "}\r",
         "if ($data.formInput.formCode === 'EQUIVALENCESUPPLYCHAIN') {\r",
+        "\tformControl.hidden.notification = true;\r",
+        "\tlistItemInReadOnly( $data.itemList );\r",
+        "\tformControl.hidden.validateButton=false;\r",
+        "\t\r",
         "}\r",
         "if ($data.formInput.formCode === 'PRICEBATTERIES') {\r",
+        "\tformControl.hidden.notification = true;\r",
+        "\tlistItemInReadOnly( $data.itemList );\r",
+        "\tformControl.hidden.validateButton=false;\r",
+        "\t\r",
         "}\r",
         "if ($data.formInput.formCode === 'COLLECTCODIFICATION') {\r",
+        "\tformControl.hidden.notification = true;\r",
+        "\tlistItemInReadOnly( $data.itemList );\r",
+        "\tformControl.hidden.validateButton=false;\r",
+        "\t\r",
         "}\r",
         "\r",
         "if (! $data.formInput.opportunity) {\r",
@@ -3477,7 +3632,7 @@
         "    $data.formInput.opportunity.quotes= [];\r",
         "}\r",
         "\r",
-        "console.log(\"  Complete list quote, minimun one\");\r",
+        "// console.log(\"  Complete list quote, minimun one\");\r",
         "if ( $data.formInput.opportunity.quotes.length === 0 ) {\r",
         "    console.log(\"Empty Quotes list detected, add one value \");\r",
         "    var copyQuote = angular.fromJson( angular.toJson(formControl.quoteToAdd));\r",
@@ -3488,11 +3643,17 @@
         "// selecteQuote point by default on the last item\r",
         "console.log(\"  selectedQuote point to the last one?\"+$data.selectedQuote);\r",
         "\r",
-        "if (! $data.selectedQuote) {\r",
+        "var pointToOne=false;\r",
+        "for (var i in $data.formInput.opportunity.quotes) {\r",
+        "\tif ($data.selectedQuote == $data.formInput.opportunity.quotes[ i ])\r",
+        "\t\tpointToOne=true;\t\r",
+        "}\r",
+        "if (! pointToOne) {\r",
         "\tconsole.log(\"  POINT it\");\r",
         "\r",
         "    $data.selectedQuote = $data.formInput.opportunity.quotes[ $data.formInput.opportunity.quotes.length-1 ];\r",
         "}\r",
+        "console.log(\"  selectedQuote point to the last one?\"+angular.toJson($data.selectedQuote));\r",
         "\r",
         "\r",
         "// console.log(\"  CheckImport\");\r",
@@ -3515,7 +3676,7 @@
         "            $data.selectedQuote.items.push( copyArray[ i ]);\r",
         "        }\r",
         "        else {\r",
-        "            $data.excelImported.errors = $data.excelImported.errors+\"Unknow code[\"+copyArray[ i ].itemCode+\"]\";\r",
+        "            $data.excelImported.errors = $data.excelImported.errors+\"<li>Unknow code[\"+copyArray[ i ].itemCode+\"]</li><br>\";\r",
         "        }\r",
         "    }\r",
         "    // concat does not work... $data.selectedQuote.items.concat( copyArray );\r",
@@ -3531,24 +3692,32 @@
         "\t\r",
         "\tvar total=0;\r",
         "\tfor (var j in quote_i.items) {\r",
-        "\t\tvar item = quote_i.items[ i ];\r",
+        "\t\tvar item = quote_i.items[ j ];\r",
         "\t\tvar referenceItem = getReferenceItemByCode(item.itemCode );\r",
         "\t\tif (referenceItem) {\r",
         "\t\t\t\titem.description = referenceItem.DESCRIPTION;\r",
         "\t\t\t\titem.unitPrice = referenceItem.UNITPRICE;\r",
         "\t\t\t\titem.itemPersistenceId = referenceItem.PERSISTENCEID;\r",
         "\t\t}\r",
+        "\t\tif (!item.unitPrice)\r",
+        "\t\t\titem.unitPrice=0;\r",
+        "\t\tif (!item.quantity)\r",
+        "\t\t\titem.quantity=0;\r",
+        "\t\tif (!item.discount)\r",
+        "\t\t\titem.discount=0;\r",
         "\t\titem.total =0;\r",
         "\t\tvar discount=(1-item.discount/100);\r",
         "\t\tif (discount<0)\r",
         "\t\t\tdiscount=0;\r",
-        "\t\tif (item.unitPrice && item.quantity)\r",
+        "\t\tif (item.unitPrice && item.quantity) {\r",
         "\t\t\titem.total = item.unitPrice * item.quantity * (1-item.discount/100);\r",
+        "\t\t\titem.total= Math.round(item.total * 100) / 100\r",
+        "\t\t}\r",
         "\t\tif (! item.total || item.total<0)\r",
         "\t\t\titem.total =0;\r",
         "\t\ttotal = total + item.total;\r",
         "\t}\r",
-        "\tquote_i.totalItem = total;\r",
+        "\tquote_i.totalItem = Math.round(total * 100) / 100;\r",
         "\r",
         "\tconsole.log(\" Update discount - Price list =[\"+quote_i.priceList+\"]\");\r",
         "\tquote_i.discountGeneral=0;\r",
@@ -3569,10 +3738,15 @@
         "\tif (quote_i.discountGeneral)\r",
         "\t\ttotal = total * (1-quote_i.discountGeneral/100);\r",
         "\tconsole.log(\"Total calculated=\"+total);\r",
-        "\tquote_i.revenue = total;\r",
+        "\tquote_i.revenue = Math.round(total * 100) / 100;\r",
         "}\r",
         "\r",
-        "\r",
+        "// Revenue is the revenue of the last quote \r",
+        "console.log(\"  getrevenue\");\r",
+        "if ($data.formInput.opportunity.quotes.length>0)\r",
+        "{\r",
+        "\t$data.formInput.opportunity.revenue = $data.formInput.opportunity.quotes[ $data.formInput.opportunity.quotes.length -1 ].revenue;\r",
+        "}\r",
         "\r",
         "\r",
         "// complete all required information\r",
@@ -3615,18 +3789,37 @@
         "return formControl;\r",
         "\r",
         "function getReferenceItemByCode ( itemCode ) {\r",
-        "    console.log(\"  getReferenceItem\");\r",
+        "    // console.log(\"  getReferenceItem\");\r",
         "    for (var j in $data.listreferenceitems) {\r",
         "        var referenceItem = $data.listreferenceitems[ j ];\r",
-        "        console.log(\"Compare [\"+referenceItem.CODE+\"] and [\"+itemCode+\"]\");\r",
+        "        // console.log(\"Compare [\"+referenceItem.CODE+\"] and [\"+itemCode+\"]\");\r",
         "        if (referenceItem.CODE === itemCode) {\r",
-        "            console.log(\"FOUND it\");\r",
+        "            // console.log(\"FOUND it\");\r",
         "            return referenceItem;\r",
         "        }\r",
         "    }    \r",
         "    console.log(\"Not exist\");\r",
         "    return null;\r",
-        "}\r"
+        "}\r",
+        "\r",
+        "\r",
+        "function listItemInReadOnly ( itemListWidget ) {\r",
+        "\t\t// qty\r",
+        "\titemListWidget.header[ 3 ].readonly = true;\r",
+        "\t// discount\r",
+        "\titemListWidget.header[ 4 ].readonly = true;\r",
+        "\t// button remove ?\r",
+        "\tconsole.log(\"mame[6] == [\"+itemListWidget.header[ 6 ].name+\"]\");\r",
+        "\r",
+        "\t// slice does not work, so move to readonly\r",
+        "\tif (itemListWidget.header[ 6 ].name=='remove') {\r",
+        "\t\titemListWidget.header[ 6 ].readonly=true;\r",
+        "\t\titemListWidget.header[ 6 ].control=\"text\";\r",
+        "\t\titemListWidget.header[ 6 ].hidden=true;\r",
+        "\t\tconsole.log(\"Remove now its[\"+angular.toJson(itemListWidget.header));\r",
+        "\t}\r",
+        "}\r",
+        "\r"
       ],
       "exposed" : false
     },
