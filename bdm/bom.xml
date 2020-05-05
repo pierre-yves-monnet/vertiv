@@ -253,6 +253,9 @@
                 <field type="BOOLEAN" length="255" name="notifyOwner" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="notifySales" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="notifyOfferFinalization" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="timeInMnToValidate" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="processInstanceId" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="finished" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints>
                 <uniqueConstraint name="opportunityNumber">
@@ -270,7 +273,7 @@ UI Designer does not have any tool to do that, so it must have a lot of JS to do
             <fields>
                 <field type="LONG" length="255" name="quoteNumber" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="revision" nullable="true" collection="false"/>
-                <field type="DOUBLE" length="255" name="revenue" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="revenu" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="customerSoldName" nullable="true" collection="false"/>
                 <field type="DATE" length="255" name="submittedDate" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="opportunityRollup" nullable="true" collection="false"/>

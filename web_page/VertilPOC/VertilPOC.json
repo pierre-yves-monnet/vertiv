@@ -2,7 +2,7 @@
   "designerVersion" : "1.10.54",
   "id" : "VertilPOC",
   "name" : "VertilPOC",
-  "lastUpdate" : 1588453923761,
+  "lastUpdate" : 1588634484221,
   "rows" : [
     [
       {
@@ -437,7 +437,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Revenue"
+                          "value" : "Revenu"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -452,7 +452,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.opportunity.revenue"
+                          "value" : "formInput.opportunity.revenu"
                         },
                         "type" : {
                           "type" : "constant",
@@ -1043,8 +1043,8 @@
                             "dimension" : {
                               "xs" : 12,
                               "sm" : 12,
-                              "md" : 12,
-                              "lg" : 12
+                              "md" : 6,
+                              "lg" : 6
                             },
                             "propertyValues" : {
                               "cssClasses" : {
@@ -1112,6 +1112,72 @@
                             "reference" : "d615c97e-99a1-4c11-b4a5-7ea867749061",
                             "hasValidationError" : false,
                             "id" : "pbInput"
+                          },
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "xs" : 12,
+                              "sm" : 12,
+                              "md" : 6,
+                              "lg" : 6
+                            },
+                            "propertyValues" : {
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "readOnly" : {
+                                "type" : "expression",
+                                "value" : "formControl.readonly.submitterdate"
+                              },
+                              "required" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "labelHidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : "Submitter date"
+                              },
+                              "labelPosition" : {
+                                "type" : "constant",
+                                "value" : "top"
+                              },
+                              "labelWidth" : {
+                                "type" : "constant",
+                                "value" : 4
+                              },
+                              "value" : {
+                                "type" : "variable",
+                                "value" : "selectedQuote.submittedDate"
+                              },
+                              "dateFormat" : {
+                                "type" : "constant",
+                                "value" : "MM/dd/yyyy"
+                              },
+                              "placeholder" : {
+                                "type" : "interpolation",
+                                "value" : "Enter a date (mm/dd/yyyy)"
+                              },
+                              "showToday" : {
+                                "type" : "constant",
+                                "value" : true
+                              },
+                              "todayLabel" : {
+                                "type" : "interpolation",
+                                "value" : "Today"
+                              }
+                            },
+                            "reference" : "1b7bc576-3c35-4f4a-997b-6ad8e4c2d9ca",
+                            "hasValidationError" : false,
+                            "id" : "pbDatePicker"
                           }
                         ],
                         [
@@ -1263,74 +1329,6 @@
                             "reference" : "3ff779bd-f1fe-477f-9a16-440236e60848",
                             "hasValidationError" : false,
                             "id" : "pbButton"
-                          }
-                        ],
-                        [
-                          {
-                            "type" : "component",
-                            "dimension" : {
-                              "xs" : 12,
-                              "sm" : 12,
-                              "md" : 12,
-                              "lg" : 12
-                            },
-                            "propertyValues" : {
-                              "cssClasses" : {
-                                "type" : "constant",
-                                "value" : ""
-                              },
-                              "hidden" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "readOnly" : {
-                                "type" : "expression",
-                                "value" : "formControl.readonly.submitterdate"
-                              },
-                              "required" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "labelHidden" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "label" : {
-                                "type" : "interpolation",
-                                "value" : "Submitter date"
-                              },
-                              "labelPosition" : {
-                                "type" : "constant",
-                                "value" : "top"
-                              },
-                              "labelWidth" : {
-                                "type" : "constant",
-                                "value" : 4
-                              },
-                              "value" : {
-                                "type" : "variable",
-                                "value" : "selectedQuote.submittedDate"
-                              },
-                              "dateFormat" : {
-                                "type" : "constant",
-                                "value" : "MM/dd/yyyy"
-                              },
-                              "placeholder" : {
-                                "type" : "interpolation",
-                                "value" : "Enter a date (mm/dd/yyyy)"
-                              },
-                              "showToday" : {
-                                "type" : "constant",
-                                "value" : true
-                              },
-                              "todayLabel" : {
-                                "type" : "interpolation",
-                                "value" : "Today"
-                              }
-                            },
-                            "reference" : "1b7bc576-3c35-4f4a-997b-6ad8e4c2d9ca",
-                            "hasValidationError" : false,
-                            "id" : "pbDatePicker"
                           }
                         ],
                         [
@@ -1790,7 +1788,7 @@
                                                 "xs" : 12,
                                                 "sm" : 12,
                                                 "md" : 12,
-                                                "lg" : 6
+                                                "lg" : 11
                                               },
                                               "propertyValues" : {
                                                 "cssClasses" : {
@@ -3603,6 +3601,10 @@
         "if ($data.formInput.formCode === 'PRICEITEM') {\r",
         "\tformControl.hidden.notification = true;\r",
         "\tlistItemInReadOnly( $data.itemList );\r",
+        "\t\t\r",
+        "\t// price in read/write\t\r",
+        "\t$data.itemList.header[ 2 ].readonly = false;\r",
+        "\r",
         "\tformControl.hidden.validateButton=false;\r",
         "\t\r",
         "}\r",
@@ -3696,8 +3698,9 @@
         "\t\tvar referenceItem = getReferenceItemByCode(item.itemCode );\r",
         "\t\tif (referenceItem) {\r",
         "\t\t\t\titem.description = referenceItem.DESCRIPTION;\r",
-        "\t\t\t\titem.unitPrice = referenceItem.UNITPRICE;\r",
-        "\t\t\t\titem.itemPersistenceId = referenceItem.PERSISTENCEID;\r",
+        "\t\t\t\t// initalize it, never override it\r",
+        "\t\t\t\tif (! item.unitPrice)\r",
+        "\t\t\t\t\titem.unitPrice = referenceItem.UNITPRICE;\r",
         "\t\t}\r",
         "\t\tif (!item.unitPrice)\r",
         "\t\t\titem.unitPrice=0;\r",
@@ -3738,14 +3741,14 @@
         "\tif (quote_i.discountGeneral)\r",
         "\t\ttotal = total * (1-quote_i.discountGeneral/100);\r",
         "\tconsole.log(\"Total calculated=\"+total);\r",
-        "\tquote_i.revenue = Math.round(total * 100) / 100;\r",
+        "\tquote_i.revenu = Math.round(total * 100) / 100;\r",
         "}\r",
         "\r",
-        "// Revenue is the revenue of the last quote \r",
-        "console.log(\"  getrevenue\");\r",
+        "// revenu is the revenu of the last quote \r",
+        "console.log(\"  getrevenu\");\r",
         "if ($data.formInput.opportunity.quotes.length>0)\r",
         "{\r",
-        "\t$data.formInput.opportunity.revenue = $data.formInput.opportunity.quotes[ $data.formInput.opportunity.quotes.length -1 ].revenue;\r",
+        "\t$data.formInput.opportunity.revenu = $data.formInput.opportunity.quotes[ $data.formInput.opportunity.quotes.length -1 ].revenu;\r",
         "}\r",
         "\r",
         "\r",
