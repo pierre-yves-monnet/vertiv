@@ -60,6 +60,7 @@ function pbAlaSqlCtrl($scope) {
             self.importFileName=files[i].name;
             $scope.properties.fileNameImported=files[i].name;
             console.log("alasqlOperation: loadFile file="+files[i].name);
+			self.importfile=files[i].name;
         }  
         self.errorImport="";
         self.statusImport="Start loading;";
@@ -69,10 +70,11 @@ function pbAlaSqlCtrl($scope) {
         $scope.properties.statusImport=self.statusImport;
         $scope.properties.errorImport=self.errorImport;
 
-
+		console.log("alasqlOperation: Scope updated");
 
         try
         {
+			console.log("alasqlOperation: execute alasql");
     	    alasql('SELECT * FROM FILE(?,{headers:true})',[event],function(data){
 	    	    console.log("widget-alasqlOperation: fileNameChanged decoded");
                 console.log(data);
@@ -83,10 +85,11 @@ function pbAlaSqlCtrl($scope) {
             self.errorImport += ex.message;
             self.statusImport += "error : "+ex.message+";";
         }
+		console.log("alasqlOperation: end loadFile");
     }
 
   this.updateData = function ( data ) {
-        // console.log(data);
+        console.log("alasqlOperation: updateData "+data);
         // get all the header value
          this.statusImport+="Update data;";
         var header =[];
@@ -104,8 +107,8 @@ function pbAlaSqlCtrl($scope) {
         $scope.properties.headerImported=header;
         $scope.properties.statusImport=this.statusImport;
         $scope.properties.errorImport=this.errorImport;
-        console.log("widget-alasqlOperation: Header");
-        console.log($scope.properties.headerImported);
+        
+        console.log("alasql: end update data "+$scope.properties.headerImported);
         
     }
     

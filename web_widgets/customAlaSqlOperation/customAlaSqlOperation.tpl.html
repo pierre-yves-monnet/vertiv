@@ -33,6 +33,8 @@
             </span>
         </span>
     </div>
+    <i>{{'Click on the import button after the file selection' | uiTranslate}}</i><br>
+    File imported:{{ctrl.importfile}}
     <div><center>  <button ng-click="" class="btn btn-info">Import</button></center></div>
     <div class="alert alert-danger" ng-show="ctrl.getStatusErrorImport().length > 0">{{ctrl.getStatusErrorImport}}</div>
 

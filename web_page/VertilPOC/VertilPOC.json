@@ -2,7 +2,7 @@
   "designerVersion" : "1.10.54",
   "id" : "VertilPOC",
   "name" : "VertilPOC",
-  "lastUpdate" : 1588634484221,
+  "lastUpdate" : 1588885649016,
   "rows" : [
     [
       {
@@ -496,7 +496,7 @@
                         },
                         "required" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "labelHidden" : {
                           "type" : "constant",
@@ -660,7 +660,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "<div class=\"glyphicon glyphicon-plus\" title=\"Add a new opportunity\"></div>"
+                          "value" : "<div class=\"glyphicon glyphicon-plus\" title=\"Add a new revision\"></div>"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -769,7 +769,7 @@
                           "value" : [
                             "quoteNumber",
                             "revision",
-                            "submittedDate | uiDate",
+                            "submittedDate | uiDate:mediumDate",
                             "revenue",
                             "opportunityRollup"
                           ]
@@ -794,6 +794,97 @@
                       "reference" : "277684fe-a653-4193-8c53-8a20a9d22ed5",
                       "hasValidationError" : false,
                       "id" : "pbTable"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "disabled" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "<div class=\"glyphicon glyphicon-minus\" title=\"Remove the last revision\"></div>"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "right"
+                        },
+                        "buttonStyle" : {
+                          "type" : "constant",
+                          "value" : "danger"
+                        },
+                        "action" : {
+                          "type" : "constant",
+                          "value" : "Remove from collection"
+                        },
+                        "assign" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "url" : {
+                          "type" : "interpolation"
+                        },
+                        "responseStatusCode" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "dataToSend" : {
+                          "type" : "constant"
+                        },
+                        "dataFromSuccess" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "closeOnSuccess" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "dataFromError" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "targetUrlOnSuccess" : {
+                          "type" : "interpolation"
+                        },
+                        "collectionToModify" : {
+                          "type" : "variable",
+                          "value" : "formInput.opportunity.quotes"
+                        },
+                        "modalId" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "collectionPosition" : {
+                          "type" : "constant",
+                          "value" : "Last"
+                        },
+                        "valueToAdd" : {
+                          "type" : "constant"
+                        },
+                        "removeItem" : {
+                          "type" : "variable"
+                        }
+                      },
+                      "reference" : "054a4aa6-9da1-4779-bda3-614b13c4ea86",
+                      "hasValidationError" : false,
+                      "id" : "pbButton"
                     }
                   ],
                   [
@@ -895,7 +986,7 @@
                               },
                               "required" : {
                                 "type" : "constant",
-                                "value" : false
+                                "value" : true
                               },
                               "minLength" : {
                                 "type" : "constant",
@@ -975,7 +1066,7 @@
                               },
                               "required" : {
                                 "type" : "constant",
-                                "value" : false
+                                "value" : true
                               },
                               "minLength" : {
                                 "type" : "constant",
@@ -1092,7 +1183,7 @@
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : "selectedQuote.revenue"
+                                "value" : "selectedQuote.revenu"
                               },
                               "type" : {
                                 "type" : "constant",
@@ -1204,7 +1295,7 @@
                               },
                               "required" : {
                                 "type" : "constant",
-                                "value" : false
+                                "value" : true
                               },
                               "labelHidden" : {
                                 "type" : "constant",
@@ -1395,7 +1486,7 @@
                               },
                               "required" : {
                                 "type" : "constant",
-                                "value" : false
+                                "value" : true
                               },
                               "labelHidden" : {
                                 "type" : "constant",
@@ -2303,7 +2394,7 @@
                   },
                   "targetUrlOnSuccess" : {
                     "type" : "interpolation",
-                    "value" : "/bonita"
+                    "value" : "{{urlBack}}"
                   },
                   "collectionPosition" : {
                     "type" : "constant"
@@ -2456,7 +2547,8 @@
                           "value" : "formOutput._submitError"
                         },
                         "targetUrlOnSuccess" : {
-                          "type" : "interpolation"
+                          "type" : "interpolation",
+                          "value" : "{{urlBack}}"
                         },
                         "collectionToModify" : {
                           "type" : "variable"
@@ -2545,7 +2637,8 @@
                           "value" : "formOutput._submitError"
                         },
                         "targetUrlOnSuccess" : {
-                          "type" : "interpolation"
+                          "type" : "interpolation",
+                          "value" : "{{urlBack}}"
                         },
                         "collectionToModify" : {
                           "type" : "variable"
@@ -2666,7 +2759,8 @@
                           "value" : "formOutput._submitError"
                         },
                         "targetUrlOnSuccess" : {
-                          "type" : "interpolation"
+                          "type" : "interpolation",
+                          "value" : "{{urlBack}}"
                         },
                         "collectionToModify" : {
                           "type" : "variable"
@@ -3108,7 +3202,7 @@
                   },
                   "buttonStyle" : {
                     "type" : "constant",
-                    "value" : "default"
+                    "value" : "info"
                   },
                   "action" : {
                     "type" : "constant",
@@ -3257,7 +3351,7 @@
                   },
                   "buttonStyle" : {
                     "type" : "constant",
-                    "value" : "default"
+                    "value" : "info"
                   },
                   "action" : {
                     "type" : "constant",
@@ -3369,6 +3463,38 @@
         "reference" : "054baca3-143a-4069-a587-d85a2740d364",
         "hasValidationError" : false,
         "id" : "pbText"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "urlBack" : {
+            "type" : "variable",
+            "value" : "urlBack"
+          },
+          "showDebug" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "ea7db780-5680-4f34-8a20-3e7e42f56561",
+        "hasValidationError" : false,
+        "id" : "customCalculateUrlBack"
       }
     ]
   ],
@@ -3740,7 +3866,7 @@
         "\r",
         "\tif (quote_i.discountGeneral)\r",
         "\t\ttotal = total * (1-quote_i.discountGeneral/100);\r",
-        "\tconsole.log(\"Total calculated=\"+total);\r",
+        "\tconsole.log(\"Total calculated with discount=\"+total);\r",
         "\tquote_i.revenu = Math.round(total * 100) / 100;\r",
         "}\r",
         "\r",
@@ -3750,6 +3876,7 @@
         "{\r",
         "\t$data.formInput.opportunity.revenu = $data.formInput.opportunity.quotes[ $data.formInput.opportunity.quotes.length -1 ].revenu;\r",
         "}\r",
+        "console.log(\"Opportunity Calculated =\"+$data.formInput.opportunity.revenu);\r",
         "\r",
         "\r",
         "// complete all required information\r",
@@ -3875,6 +4002,10 @@
         "    'actionInput':'moreinfo'",
         "};"
       ],
+      "exposed" : false
+    },
+    "urlBack" : {
+      "type" : "constant",
       "exposed" : false
     }
   },

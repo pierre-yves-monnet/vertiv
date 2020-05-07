@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
+    <application token="vertiveDashboard" version="1.0" profile="User" homePage="1" state="ACTIVATED" layout="custompage_layoutBonita" theme="custompage_bootstrapdefaulttheme">
+        <displayName>Dashboard</displayName>
+        <applicationPages>
+            <applicationPage customPage="custompage_VertilPocDashboard" token="1"/>
+            <applicationPage customPage="custompage_VertilPocDashboard" token="43"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="43">
+                <displayName>Dashboard</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+</applications>

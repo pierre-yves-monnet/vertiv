@@ -3,7 +3,7 @@
   "previousDesignerVersion" : "1.6.46",
   "id" : "customAlaSqlOperation",
   "name" : "alaSqlOperation",
-  "lastUpdate" : 1588119910951,
+  "lastUpdate" : 1588877768978,
   "template" : "@customAlaSqlOperation.tpl.html",
   "controller" : "@customAlaSqlOperation.ctrl.js",
   "custom" : true,

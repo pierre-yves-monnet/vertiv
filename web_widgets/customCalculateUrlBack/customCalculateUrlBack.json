@@ -1,0 +1,30 @@
+{
+  "designerVersion" : "1.10.12",
+  "previousDesignerVersion" : "1.6.46",
+  "id" : "customCalculateUrlBack",
+  "name" : "calculateUrlBack",
+  "lastUpdate" : 1588885589574,
+  "template" : "@customCalculateUrlBack.tpl.html",
+  "controller" : "@customCalculateUrlBack.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "urlBack",
+      "name" : "urlBack",
+      "help" : "Contains the URL to come back",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "showDebug",
+      "name" : "showDebug",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

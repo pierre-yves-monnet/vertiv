@@ -2,7 +2,7 @@
   "designerVersion" : "1.10.54",
   "id" : "VertilPocDashboard",
   "name" : "VertilPocDashboard",
-  "lastUpdate" : 1588637950994,
+  "lastUpdate" : 1588885791767,
   "rows" : [
     [
       {
@@ -97,7 +97,7 @@
           },
           "alignment" : {
             "type" : "constant",
-            "value" : "left"
+            "value" : "right"
           },
           "buttonStyle" : {
             "type" : "constant",
@@ -115,44 +115,8 @@
         "dimension" : {
           "xs" : 12,
           "sm" : 12,
-          "md" : 12,
-          "lg" : 12
-        },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : "alert alert-info"
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "text" : {
-            "type" : "interpolation",
-            "value" : "Complete request"
-          },
-          "level" : {
-            "type" : "constant",
-            "value" : "Level 3"
-          },
-          "alignment" : {
-            "type" : "constant",
-            "value" : "left"
-          }
-        },
-        "reference" : "74a995e2-4218-40cd-91a8-5681285a1e95",
-        "hasValidationError" : false,
-        "id" : "pbTitle"
-      }
-    ],
-    [
-      {
-        "type" : "component",
-        "dimension" : {
-          "xs" : 12,
-          "sm" : 12,
-          "md" : 12,
-          "lg" : 12
+          "md" : 4,
+          "lg" : 4
         },
         "propertyValues" : {
           "cssClasses" : {
@@ -163,124 +127,46 @@
             "type" : "constant",
             "value" : false
           },
-          "allowHTML" : {
-            "type" : "constant",
-            "value" : true
-          },
-          "headers" : {
-            "type" : "constant",
-            "value" : [
-              "Number",
-              "Type",
-              "Owner",
-              "Revenu"
-            ]
-          },
           "type" : {
             "type" : "constant",
-            "value" : "Bonita API"
+            "value" : "Pie"
           },
-          "apiUrl" : {
-            "type" : "constant",
-            "value" : "../API/bdm/businessData/com.vertiv.model.Opportunity?q=findByFinished&f=finished=true"
+          "data" : {
+            "type" : "expression",
+            "value" : "formControl.chartPerOpportunity.data"
           },
-          "params" : {
-            "type" : "constant"
+          "labels" : {
+            "type" : "expression",
+            "value" : "formControl.chartPerOpportunity.type"
           },
-          "content" : {
-            "type" : "constant"
-          },
-          "columnsKey" : {
+          "setLabels" : {
             "type" : "constant",
             "value" : [
-              "opportunityNumber",
-              "opportunityType",
-              "owneruser",
-              "revenu"
+              "Default set label"
             ]
           },
-          "sortColumns" : {
-            "type" : "constant",
-            "value" : [
-              "opportunityNumber",
-              "opportunityType",
-              "owneruser",
-              "revenu"
-            ]
-          },
-          "selectedRow" : {
-            "type" : "variable",
-            "value" : "selectFinishedOpportunity"
-          },
-          "pageSize" : {
-            "type" : "constant",
-            "value" : 10
-          },
-          "filter" : {
-            "type" : "constant"
-          },
-          "striped" : {
-            "type" : "constant",
-            "value" : true
-          },
-          "condensed" : {
+          "legendHidden" : {
             "type" : "constant",
             "value" : false
           },
-          "bordered" : {
-            "type" : "constant",
-            "value" : false
+          "colors" : {
+            "type" : "constant"
+          },
+          "options" : {
+            "type" : "constant"
           }
         },
-        "reference" : "40f9d054-ff3f-4ccc-8e84-50a717bc9819",
+        "reference" : "d659d238-361a-4be4-9ec7-670728e0872f",
         "hasValidationError" : false,
-        "id" : "pbDataTable"
-      }
-    ],
-    [
+        "id" : "pbChart"
+      },
       {
         "type" : "component",
         "dimension" : {
           "xs" : 12,
           "sm" : 12,
-          "md" : 12,
-          "lg" : 12
-        },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : "alert alert-info"
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "text" : {
-            "type" : "interpolation",
-            "value" : "In progress"
-          },
-          "level" : {
-            "type" : "constant",
-            "value" : "Level 3"
-          },
-          "alignment" : {
-            "type" : "constant",
-            "value" : "left"
-          }
-        },
-        "reference" : "5ca35820-e9b0-454f-94fb-ee623f544b28",
-        "hasValidationError" : false,
-        "id" : "pbTitle"
-      }
-    ],
-    [
-      {
-        "type" : "component",
-        "dimension" : {
-          "xs" : 12,
-          "sm" : 12,
-          "md" : 12,
-          "lg" : 12
+          "md" : 4,
+          "lg" : 4
         },
         "propertyValues" : {
           "cssClasses" : {
@@ -291,78 +177,1134 @@
             "type" : "constant",
             "value" : false
           },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Default label"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
           "allowHTML" : {
             "type" : "constant",
             "value" : true
           },
-          "headers" : {
+          "text" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "alignment" : {
             "type" : "constant",
-            "value" : [
-              "Number",
-              "Type",
-              "Owner",
-              "Revenu"
-            ]
+            "value" : "left"
+          }
+        },
+        "reference" : "1ddb313e-bcbe-494f-99cc-0847d64fb424",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      },
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 4,
+          "lg" : 4
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
           },
           "type" : {
             "type" : "constant",
-            "value" : "Bonita API"
+            "value" : "Bar"
           },
-          "apiUrl" : {
-            "type" : "constant",
-            "value" : "../API/bdm/businessData/com.vertiv.model.Opportunity?q=findByFinished&f=finished=false"
-          },
-          "params" : {
-            "type" : "constant"
-          },
-          "content" : {
-            "type" : "constant"
-          },
-          "columnsKey" : {
+          "data" : {
             "type" : "constant",
             "value" : [
-              "opportunityNumber",
-              "opportunityType",
-              "owneruser",
-              "revenu"
+              "80",
+              "159",
+              "140",
+              "130",
+              "56",
+              "10",
+              "4"
             ]
           },
-          "sortColumns" : {
+          "labels" : {
             "type" : "constant",
             "value" : [
-              "opportunityNumber",
-              "opportunityType",
-              "owneruser",
-              "revenu"
+              "<1 day",
+              "1-3 days",
+              "4-5 days",
+              "1-2 weeks",
+              "3-5 weeks",
+              "> 5 weeks"
             ]
           },
-          "selectedRow" : {
-            "type" : "variable",
-            "value" : "selectedCurrentOpportunity"
-          },
-          "pageSize" : {
+          "setLabels" : {
             "type" : "constant",
-            "value" : 10
+            "value" : [
+              "Default set label"
+            ]
           },
-          "filter" : {
-            "type" : "constant"
-          },
-          "striped" : {
+          "legendHidden" : {
             "type" : "constant",
             "value" : true
           },
-          "condensed" : {
+          "colors" : {
+            "type" : "constant"
+          },
+          "options" : {
+            "type" : "constant"
+          }
+        },
+        "reference" : "f1483cf2-1c20-4869-b608-20691de8c2c2",
+        "hasValidationError" : false,
+        "id" : "pbChart"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 4,
+          "lg" : 4
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
             "type" : "constant",
             "value" : false
           },
-          "bordered" : {
+          "labelHidden" : {
             "type" : "constant",
-            "value" : false
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Default label"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Revenu per type"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
           }
         },
-        "reference" : "df2aac03-d35e-47bb-922e-28d4fde2cd54",
+        "reference" : "382754c3-b34e-4eef-9534-f5d61e56de29",
         "hasValidationError" : false,
-        "id" : "pbDataTable"
+        "id" : "pbText"
+      },
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 4,
+          "lg" : 4
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Default label"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "b23f6e43-76f3-4360-b3e7-7dcd7321763f",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      },
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 4,
+          "lg" : 4
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Default label"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Request validation"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          }
+        },
+        "reference" : "2fb579f0-1c2f-4928-9b1f-8988b624ee74",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "bda3dee2-0444-40b5-bff8-ae93db29ed04",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "alert alert-info"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Complete request"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 3"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "74a995e2-4218-40cd-91a8-5681285a1e95",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "headers" : {
+                  "type" : "constant",
+                  "value" : [
+                    "Number",
+                    "Type",
+                    "Owner",
+                    "Revenu"
+                  ]
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "Bonita API"
+                },
+                "apiUrl" : {
+                  "type" : "constant",
+                  "value" : "../API/bdm/businessData/com.vertiv.model.Opportunity?q=findByFinished&f=finished=true"
+                },
+                "params" : {
+                  "type" : "constant"
+                },
+                "content" : {
+                  "type" : "constant"
+                },
+                "columnsKey" : {
+                  "type" : "constant",
+                  "value" : [
+                    "opportunityNumber",
+                    "opportunityType",
+                    "ownerUser",
+                    "revenu"
+                  ]
+                },
+                "sortColumns" : {
+                  "type" : "constant",
+                  "value" : [
+                    "opportunityNumber",
+                    "opportunityType",
+                    "ownerUser",
+                    "revenu"
+                  ]
+                },
+                "selectedRow" : {
+                  "type" : "variable",
+                  "value" : "selectedOpportunity"
+                },
+                "pageSize" : {
+                  "type" : "constant",
+                  "value" : 10
+                },
+                "filter" : {
+                  "type" : "constant"
+                },
+                "striped" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "condensed" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "bordered" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "40f9d054-ff3f-4ccc-8e84-50a717bc9819",
+              "hasValidationError" : false,
+              "id" : "pbDataTable"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "alert alert-info"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "In progress"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 3"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "5ca35820-e9b0-454f-94fb-ee623f544b28",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "headers" : {
+                  "type" : "constant",
+                  "value" : [
+                    "Number",
+                    "Type",
+                    "Owner",
+                    "Revenu"
+                  ]
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "Bonita API"
+                },
+                "apiUrl" : {
+                  "type" : "constant",
+                  "value" : "../API/bdm/businessData/com.vertiv.model.Opportunity?q=findByFinished&f=finished=false"
+                },
+                "params" : {
+                  "type" : "constant"
+                },
+                "content" : {
+                  "type" : "constant"
+                },
+                "columnsKey" : {
+                  "type" : "constant",
+                  "value" : [
+                    "opportunityNumber",
+                    "opportunityType",
+                    "ownerUser",
+                    "revenu"
+                  ]
+                },
+                "sortColumns" : {
+                  "type" : "constant",
+                  "value" : [
+                    "opportunityNumber",
+                    "opportunityType",
+                    "ownerUser",
+                    "revenu"
+                  ]
+                },
+                "selectedRow" : {
+                  "type" : "variable",
+                  "value" : "selectedOpportunity"
+                },
+                "pageSize" : {
+                  "type" : "constant",
+                  "value" : 10
+                },
+                "filter" : {
+                  "type" : "constant"
+                },
+                "striped" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "condensed" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "bordered" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "df2aac03-d35e-47bb-922e-28d4fde2cd54",
+              "hasValidationError" : false,
+              "id" : "pbDataTable"
+            }
+          ]
+        ]
+      },
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "eed8cf56-4501-46ca-bd95-4b3c633438c9",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "alert alert-info"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Selected request"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 3"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "3c29d35f-99db-4c4e-aea5-f3f1df12236a",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 8,
+                "lg" : 8
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "minLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "maxLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "readOnly" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Opportunity Number"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "placeholder" : {
+                  "type" : "interpolation"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "selectedOpportunity.opportunityNumber"
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "text"
+                },
+                "min" : {
+                  "type" : "constant"
+                },
+                "max" : {
+                  "type" : "constant"
+                },
+                "step" : {
+                  "type" : "constant",
+                  "value" : 1
+                }
+              },
+              "reference" : "eecb9ec0-4873-40d3-bc08-0b509c9cf935",
+              "hasValidationError" : false,
+              "id" : "pbInput"
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Overview"
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "URL"
+                },
+                "targetUrl" : {
+                  "type" : "expression",
+                  "value" : "'/bonita/portal/form/processInstance/' + selectedOpportunity.processInstanceId"
+                },
+                "pageToken" : {
+                  "type" : "constant"
+                },
+                "processName" : {
+                  "type" : "constant"
+                },
+                "processVersion" : {
+                  "type" : "constant"
+                },
+                "taskId" : {
+                  "type" : "constant"
+                },
+                "caseId" : {
+                  "type" : "constant"
+                },
+                "target" : {
+                  "type" : "constant",
+                  "value" : "_blank"
+                },
+                "appToken" : {
+                  "type" : "constant"
+                },
+                "urlParams" : {
+                  "type" : "constant"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "buttonStyle" : {
+                  "type" : "constant",
+                  "value" : "link"
+                }
+              },
+              "reference" : "72fea31e-f9b0-4902-9476-4cbeac43a191",
+              "hasValidationError" : false,
+              "id" : "pbLink"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "minLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "maxLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "readOnly" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Opportunity type"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "placeholder" : {
+                  "type" : "interpolation"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "selectedOpportunity.opportunityType"
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "text"
+                },
+                "min" : {
+                  "type" : "constant"
+                },
+                "max" : {
+                  "type" : "constant"
+                },
+                "step" : {
+                  "type" : "constant",
+                  "value" : 1
+                }
+              },
+              "reference" : "c3190afc-a5f8-4fac-8131-cc7eba871f8a",
+              "hasValidationError" : false,
+              "id" : "pbInput"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "minLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "maxLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "readOnly" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Revenu"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "placeholder" : {
+                  "type" : "interpolation"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "selectedOpportunity.revenu"
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "text"
+                },
+                "min" : {
+                  "type" : "constant"
+                },
+                "max" : {
+                  "type" : "constant"
+                },
+                "step" : {
+                  "type" : "constant",
+                  "value" : 1
+                }
+              },
+              "reference" : "3a914244-15f6-4d25-9988-f3f8077d51e0",
+              "hasValidationError" : false,
+              "id" : "pbInput"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "minLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "maxLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "readOnly" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Owner name"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "placeholder" : {
+                  "type" : "interpolation"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "selectedOpportunity.ownerUser"
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "text"
+                },
+                "min" : {
+                  "type" : "constant"
+                },
+                "max" : {
+                  "type" : "constant"
+                },
+                "step" : {
+                  "type" : "constant",
+                  "value" : 1
+                }
+              },
+              "reference" : "cb8c1b1a-b5a5-4aa2-b960-9a938f2b4a9b",
+              "hasValidationError" : false,
+              "id" : "pbInput"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "minLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "maxLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "readOnly" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Data Collect"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "placeholder" : {
+                  "type" : "interpolation"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "selectedOpportunity.dataCollectUser"
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "text"
+                },
+                "min" : {
+                  "type" : "constant"
+                },
+                "max" : {
+                  "type" : "constant"
+                },
+                "step" : {
+                  "type" : "constant",
+                  "value" : 1
+                }
+              },
+              "reference" : "b35f4619-807b-49cc-b235-287118762ff5",
+              "hasValidationError" : false,
+              "id" : "pbInput"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "minLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "maxLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "readOnly" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Finalize offer"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "placeholder" : {
+                  "type" : "interpolation"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "selectedOpportunity.finalizeOfferUser"
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "text"
+                },
+                "min" : {
+                  "type" : "constant"
+                },
+                "max" : {
+                  "type" : "constant"
+                },
+                "step" : {
+                  "type" : "constant",
+                  "value" : 1
+                }
+              },
+              "reference" : "8c07c87d-6ed5-41d3-b9c5-71cc157744a0",
+              "hasValidationError" : false,
+              "id" : "pbInput"
+            }
+          ]
+        ]
       }
     ]
   ],
@@ -394,14 +1336,14 @@
     "currentOpportunity" : {
       "type" : "businessdata",
       "value" : [
-        "{\"displayValue\":\"findByFinished [com.vertiv.model.Opportunity]\",\"businessObjectName\":\"Opportunity\",\"query\":{\"name\":\"findByFinished\",\"displayName\":\"finished\"},\"id\":\"com_vertiv_model_Opportunity\",\"qualifiedName\":\"com.vertiv.model.Opportunity\",\"filters\":[{\"type\":\"Boolean\",\"name\":\"finished\",\"value\":\"false\"}],\"pagination\":{\"p\":0,\"c\":10}}"
+        "{\"displayValue\":\"findByFinished [com.vertiv.model.Opportunity]\",\"businessObjectName\":\"Opportunity\",\"query\":{\"name\":\"findByFinished\",\"displayName\":\"finished\"},\"id\":\"com_vertiv_model_Opportunity\",\"qualifiedName\":\"com.vertiv.model.Opportunity\",\"filters\":[{\"type\":\"Boolean\",\"name\":\"finished\",\"value\":\"false\"}],\"pagination\":{\"p\":0,\"c\":\"10000\"}}"
       ],
       "exposed" : false
     },
     "finishedOpportunity" : {
       "type" : "businessdata",
       "value" : [
-        "{\"displayValue\":\"findByFinished [com.vertiv.model.Opportunity]\",\"businessObjectName\":\"Opportunity\",\"query\":{\"name\":\"findByFinished\",\"displayName\":\"finished\"},\"id\":\"com_vertiv_model_Opportunity\",\"qualifiedName\":\"com.vertiv.model.Opportunity\",\"filters\":[{\"type\":\"Boolean\",\"name\":\"finished\",\"value\":\"true\"}],\"pagination\":{\"p\":0,\"c\":10}}"
+        "{\"displayValue\":\"findByFinished [com.vertiv.model.Opportunity]\",\"businessObjectName\":\"Opportunity\",\"query\":{\"name\":\"findByFinished\",\"displayName\":\"finished\"},\"id\":\"com_vertiv_model_Opportunity\",\"qualifiedName\":\"com.vertiv.model.Opportunity\",\"filters\":[{\"type\":\"Boolean\",\"name\":\"finished\",\"value\":\"true\"}],\"pagination\":{\"p\":0,\"c\":\"10000\"}}"
       ],
       "exposed" : false
     },
@@ -423,6 +1365,66 @@
       "type" : "businessdata",
       "value" : [
         "{\"displayValue\":\"findByFinished [com.vertiv.model.Opportunity]\",\"businessObjectName\":\"Opportunity\",\"query\":{\"name\":\"findByFinished\",\"displayName\":\"finished\"},\"id\":\"com_vertiv_model_Opportunity\",\"qualifiedName\":\"com.vertiv.model.Opportunity\",\"filters\":[{\"type\":\"Boolean\",\"name\":\"finished\",\"value\":\"false\"}],\"pagination\":{\"p\":0,\"c\":10}}"
+      ],
+      "exposed" : false
+    },
+    "formControl" : {
+      "type" : "expression",
+      "value" : [
+        "var formControl = { \"chartPerOpportunity\" : {\"collect\": {} }};\r",
+        "\r",
+        "for (var i in $data.finishedOpportunity){\r",
+        "\tvar opportunity = $data.finishedOpportunity[ i ];\r",
+        "\tvar type\t= opportunity.opportunityType;\r",
+        "\tvar revenu  =opportunity.revenu;\r",
+        "\tconsole.log(\"opportunity type=\"+type+\" revenu=\"+revenu);\r",
+        "\tif ( type ) {\r",
+        "\t\tif (! formControl.chartPerOpportunity.collect[ type ]) {\r",
+        "\t\t\tformControl.chartPerOpportunity.collect[ type ] = { \"label\" :type, \"revenu\":0};\r",
+        "\t\t}\r",
+        "\t\tformControl.chartPerOpportunity.collect[ type ].revenu =formControl.chartPerOpportunity.collect[ type ].revenu+revenu;\r",
+        "\t}\r",
+        "}\r",
+        "\r",
+        "\r",
+        "for (var i in $data.currentOpportunity){\r",
+        "\tvar opportunity = $data.currentOpportunity[ i ];\r",
+        "\tvar type\t= opportunity.opportunityType;\r",
+        "\tvar revenu  =opportunity.revenu;\r",
+        "\tconsole.log(\"opportunity type=\"+type+\" revenu=\"+revenu);\r",
+        "\tif ( type ) {\r",
+        "\t\tif (! formControl.chartPerOpportunity.collect[ type ]) {\r",
+        "\t\t\tformControl.chartPerOpportunity.collect[ type ] = { \"label\" :type, \"revenu\":0};\r",
+        "\t\t}\t\r",
+        "\t\tformControl.chartPerOpportunity.collect[ type ].revenu =formControl.chartPerOpportunity.collect[ type ].revenu+revenu;\r",
+        "\t}\r",
+        "}\r",
+        "\r",
+        "//------------------------------- creates list\r",
+        "console.log(\"opportunity Create list = \"+angular.toJson(formControl.chartPerOpportunity.collect));\r",
+        "\r",
+        "formControl.chartPerOpportunity.type=[];\r",
+        "formControl.chartPerOpportunity.data=[];\r",
+        "for (var key in formControl.chartPerOpportunity.collect)\r",
+        "{\r",
+        "\tvar item = formControl.chartPerOpportunity.collect[ key ];\r",
+        "\tconsole.log(\"Item=\"+angular.toJson(item));\r",
+        "\tformControl.chartPerOpportunity.type.push( item.label );\r",
+        "\tformControl.chartPerOpportunity.data.push( item.revenu );\r",
+        "}\r",
+        "\r",
+        "\r",
+        "\r",
+        "console.log(\"End of form control\");\r",
+        "return formControl;\r",
+        "\r"
+      ],
+      "exposed" : false
+    },
+    "selectedOpportunity" : {
+      "type" : "json",
+      "value" : [
+        "{}"
       ],
       "exposed" : false
     }
