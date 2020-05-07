@@ -8,6 +8,9 @@ Deploy the REST API CONTEXT
 Deploy the Gasoline page
   https://github.com/Bonitasoft-Community/page_gasolinetruck/releases/download/1.6.3/CustomPageGasoline-1.6.3.zip
 
+Deploy the Meteor page
+https://github.com/Bonitasoft-Community/page_meteor/releases/download/3.0/CustomPageMeteor-3.0.2.zip
+
 Deploy the BDM
 
 Deploy the process
